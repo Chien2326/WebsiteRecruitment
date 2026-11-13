@@ -1,0 +1,906 @@
+{
+  "common": {
+    "siteName": "ハケンワーク",
+    "loading": "読み込み中…"
+  },
+  "meta": {
+    "title": "ハケンワーク｜外国人のためのお仕事探し",
+    "description": "日本で働きたい外国人のための派遣・アルバイト求人サイト。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "jobs": "お仕事を探す",
+    "news": "お知らせ",
+    "forEmployers": "企業の方へ",
+    "login": "ログイン",
+    "signup": "新規登録",
+    "language": "言語",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる",
+    "main": "メインメニュー"
+  },
+  "footer": {
+    "tagline": "日本で働く外国人を、全力でサポートします。",
+    "jobSeekers": "お仕事をお探しの方",
+    "company": "会社情報",
+    "support": "サポート",
+    "searchJobs": "求人を探す",
+    "byPrefecture": "都道府県から探す",
+    "visaInfo": "ビザについて",
+    "about": "会社概要",
+    "news": "お知らせ",
+    "forEmployers": "求人掲載のご相談",
+    "faq": "よくある質問",
+    "contact": "お問い合わせ",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "copyright": "© {year} ハケンワーク All rights reserved."
+  },
+  "jobDetail": {
+    "jobCode": "求人番号",
+    "postedOn": "掲載日",
+    "backToList": "求人一覧に戻る",
+    "salary": "給与",
+    "location": "勤務地",
+    "shift": "勤務時間・シフト",
+    "hoursPerWeek": "週{hours}時間",
+    "japaneseLevel": "日本語レベル",
+    "visa": "対応ビザ",
+    "features": "こだわり条件",
+    "description": "仕事内容",
+    "client": "派遣先",
+    "clientHidden": "派遣先企業名は非公開です（応募・面談時にご案内します）",
+    "transportIncluded": "交通費支給",
+    "apply": "この求人に応募する",
+    "save": "保存",
+    "share": "シェア",
+    "salaryHourly": "時給 {min}円〜{max}円",
+    "salaryHourlyFrom": "時給 {min}円〜",
+    "salaryMonthly": "月給 {min}円〜{max}円",
+    "salaryMonthlyFrom": "月給 {min}円〜",
+    "level": {
+      "none": "不問",
+      "n5": "N5程度",
+      "n4": "N4程度",
+      "n3": "N3程度",
+      "n2": "N2程度",
+      "n1": "N1程度"
+    },
+    "feature": {
+      "dormitory": "寮・社宅あり",
+      "no_experience": "未経験歓迎",
+      "transport_paid": "交通費支給",
+      "english_ok": "英語OK"
+    },
+    "employment": {
+      "haken": "派遣",
+      "part_time": "アルバイト・パート",
+      "full_time": "正社員",
+      "contract": "契約社員"
+    },
+    "saved": "保存済み",
+    "saveLogin": "ログインすると求人を保存できます",
+    "newBadge": "NEW",
+    "monthlyEstimate": "月収目安 約{amount}円",
+    "monthlyEstimateShort": "月収目安 約{amount}円",
+    "monthlyEstimateNote": "週{hours}時間で計算した税引き前の目安です（残業代・手当は含みません）。",
+    "nearestStation": "最寄り駅",
+    "deadline": "応募締切",
+    "deadlineNote": "締切日を過ぎると応募できなくなります。",
+    "shareTitle": "この求人をシェア",
+    "shareMore": "その他",
+    "copyLink": "リンクをコピー",
+    "copied": "コピーしました",
+    "similarTitle": "近くのエリアの求人"
+  },
+  "map": {
+    "title": "地図からお仕事を探す",
+    "subtitle": "エリアをタップして、都道府県を選んでください",
+    "allJapan": "全国",
+    "backToJapan": "全国に戻る",
+    "jobs": "{count}件",
+    "regionAll": "{region}のすべて",
+    "mapLabel": "日本地図",
+    "prefecturesIn": "{region}の都道府県"
+  },
+  "search": {
+    "keywordLabel": "キーワード",
+    "keywordPlaceholder": "職種・仕事内容（例：倉庫、ホテル）",
+    "prefectureLabel": "勤務地",
+    "anyPrefecture": "すべての都道府県",
+    "submit": "検索"
+  },
+  "jobsPage": {
+    "title": "求人一覧",
+    "resultCount": "{count}件の求人",
+    "noResults": "条件に合う求人が見つかりませんでした。",
+    "clearFilters": "条件をクリア",
+    "showing": "（{from}〜{to}件目）",
+    "pagination": "ページ送り",
+    "prev": "前のページ",
+    "next": "次のページ",
+    "filters": {
+      "title": "条件を絞り込む",
+      "any": "指定なし",
+      "level": "日本語レベル",
+      "levelHint": "あなたのレベルで応募できる求人を表示します",
+      "visa": "在留資格",
+      "minHourly": "時給",
+      "hourlyOption": "{amount}円以上",
+      "employment": "雇用形態",
+      "features": "こだわり条件",
+      "sort": "並び順",
+      "sortNew": "新着順",
+      "sortSalary": "給与が高い順",
+      "apply": "この条件で検索",
+      "reset": "条件をリセット"
+    },
+    "recentTitle": "最近見た求人",
+    "recentClear": "履歴を消す"
+  },
+  "regions": {
+    "hokkaido": "北海道",
+    "tohoku": "東北",
+    "kanto": "関東",
+    "chubu": "中部",
+    "kansai": "関西",
+    "chugoku": "中国",
+    "shikoku": "四国",
+    "kyushu": "九州・沖縄"
+  },
+  "auth": {
+    "loginTitle": "ログイン",
+    "signupTitle": "無料会員登録",
+    "loginLead": "おかえりなさい！",
+    "signupLead": "1分で登録完了。あなたにぴったりのお仕事が見つかります。",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "passwordHint": "10文字以上",
+    "showPassword": "パスワードを表示",
+    "hidePassword": "パスワードを隠す",
+    "lastName": "姓",
+    "firstName": "名",
+    "submitLogin": "ログイン",
+    "submitSignup": "登録する",
+    "or": "または",
+    "google": "Googleで続ける",
+    "apple": "Appleで続ける",
+    "noAccount": "アカウントをお持ちでない方",
+    "toSignup": "無料会員登録",
+    "haveAccount": "すでにアカウントをお持ちの方",
+    "toLogin": "ログイン",
+    "agree": "登録すると、利用規約とプライバシーポリシーに同意したものとみなされます。",
+    "myPage": "マイページ",
+    "logout": "ログアウト",
+    "forgotPassword": "パスワードをお忘れの方"
+  },
+  "errors": {
+    "generic": "エラーが発生しました。しばらくしてからもう一度お試しください。",
+    "network": "通信エラーです。接続を確認してください。",
+    "validation": "入力内容を確認してください。",
+    "invalid_credentials": "メールアドレスまたはパスワードが正しくありません。",
+    "email_taken": "このメールアドレスはすでに登録されています。",
+    "too_many_requests": "試行回数が多すぎます。しばらく待ってからお試しください。",
+    "csrf_failed": "セッションの有効期限が切れました。ページを再読み込みしてください。",
+    "session_expired": "ログインの有効期限が切れました。もう一度ログインしてください。",
+    "not_authenticated": "ログインが必要です。",
+    "oauth_unavailable": "このログイン方法は現在ご利用いただけません。",
+    "oauth_failed": "外部サービスでのログインに失敗しました。",
+    "oauth_cancelled": "ログインがキャンセルされました。",
+    "oauth_no_email": "メールアドレスを取得できませんでした。",
+    "email_exists": "このメールアドレスはすでに登録されています。メールアドレスとパスワードでログインしてください。",
+    "account_disabled": "このアカウントはご利用いただけません。",
+    "empty_file": "ファイルが空です。",
+    "file_too_large": "ファイルサイズは5MBまでです。",
+    "unsupported_type": "PDFまたはWord（.docx）ファイルを選んでください。",
+    "content_mismatch": "ファイルの中身が形式と一致しません。",
+    "corrupt_file": "ファイルが壊れている可能性があります。",
+    "unsafe_content": "安全でない内容が含まれているため、アップロードできません。",
+    "too_many_resumes": "CVは5件まで登録できます。不要なCVを削除してください。",
+    "profile_required": "先にプロフィールを登録してください。",
+    "profile_incomplete": "応募するには、プロフィール（氏名）を入力してください。",
+    "already_applied": "この求人にはすでに応募済みです。",
+    "job_not_found": "この求人は掲載が終了しました。",
+    "resume_not_found": "CVが見つかりません。",
+    "invalid_visa_type": "在留資格を選び直してください。",
+    "forbidden": "この操作は許可されていません。",
+    "display_name_reveals_client": "公開用の表示名に実際の企業名が含まれています。",
+    "approval_required": "公開には承認が必要です。",
+    "invalid_transition": "この状態には変更できません。",
+    "review_note_required": "差し戻しの理由を入力してください。",
+    "invalid_prefecture": "都道府県が正しくありません。",
+    "cannot_modify_self": "自分自身の権限は変更できません。",
+    "inline_not_allowed": "このファイルはプレビューできません。",
+    "application_not_found": "応募が見つかりません。",
+    "user_not_found": "ユーザーが見つかりません。",
+    "not_found": "見つかりません。",
+    "invalid_token": "リンクが無効か、有効期限が切れています。",
+    "password_equals_email": "メールアドレスと同じパスワードは使えません。",
+    "already_verified": "メールアドレスはすでに確認済みです。",
+    "wrong_password": "現在のパスワードが正しくありません。",
+    "same_email": "現在と同じメールアドレスです。",
+    "not_linked": "このアカウントは連携されていません。",
+    "last_login_method": "ログイン方法がなくなるため解除できません。先にパスワードを設定してください。",
+    "staff_cannot_self_delete": "社内アカウントは管理者が削除します。",
+    "confirm_email_mismatch": "メールアドレスが一致しません。",
+    "oauth_already_linked": "このアカウントはすでに別の会員と連携されています。",
+    "provider_already_linked": "すでに別のアカウントを連携しています。先に解除してください。",
+    "slug_taken": "このURL（スラッグ）はすでに使われています。",
+    "news_not_found": "お知らせが見つかりません。",
+    "too_many_saved_jobs": "保存できる求人は200件までです。不要なものを削除してください。"
+  },
+  "mypage": {
+    "title": "マイページ",
+    "hello": "{name}さん、こんにちは！",
+    "helloAnon": "ようこそ！",
+    "applications": "応募した求人",
+    "total": "応募",
+    "inProgress": "選考中",
+    "interview": "面接",
+    "accepted": "採用",
+    "empty": "まだ応募した求人はありません。",
+    "emptyCta": "お仕事を探す",
+    "appliedOn": "応募日：{date}",
+    "updatedOn": "更新：{date}",
+    "profileCardTitle": "プロフィール・CV",
+    "profileCardText": "プロフィールを充実させると、採用担当者にあなたの魅力が伝わります。",
+    "savedCardTitle": "保存した求人",
+    "savedCardText": "気になる求人をあとから見返せます。",
+    "savedTitle": "保存した求人",
+    "savedEmpty": "保存した求人はまだありません。求人の♡ボタンで保存できます。",
+    "backToMypage": "マイページへ戻る",
+    "recommendedTitle": "あなたへのおすすめ求人",
+    "recommendedMore": "求人をもっと見る",
+    "recommendedText": "日本語レベル・在留資格・希望勤務地に合う求人です。",
+    "recommendedHint": "プロフィール（日本語レベル・在留資格・希望勤務地）を入力すると、より合った求人が表示されます。",
+    "recommendedHintLink": "プロフィールを入力する",
+    "recommendedEmpty": "条件に合う求人は今ありません。希望勤務地を増やしてみてください。"
+  },
+  "status": {
+    "applied": "応募済み",
+    "reviewing": "選考中",
+    "interview": "面接のご案内",
+    "accepted": "採用",
+    "rejected": "お見送り",
+    "rejectedNote": "今回はご縁がありませんでした。ほかのお仕事も探してみましょう。"
+  },
+  "profile": {
+    "title": "プロフィール",
+    "completion": "{percent}% 完了",
+    "basic": "基本情報",
+    "residence": "在留資格",
+    "language": "日本語・経験",
+    "location": "お住まい",
+    "lastName": "姓",
+    "firstName": "名",
+    "lastNameKana": "姓（カナ）",
+    "firstNameKana": "名（カナ）",
+    "birthDate": "生年月日",
+    "nationality": "国籍",
+    "phone": "電話番号",
+    "phoneHint": "例：090-1234-5678",
+    "visa": "在留資格",
+    "visaExpiry": "在留期限",
+    "japaneseLevel": "日本語レベル",
+    "years": "経験年数",
+    "summary": "職歴・スキル",
+    "summaryPlaceholder": "これまでの仕事や、できることを書いてください",
+    "currentPrefecture": "現在お住まいの都道府県",
+    "select": "選択してください",
+    "save": "保存する",
+    "saving": "保存中…",
+    "saved": "保存しました",
+    "resumes": "CV（履歴書・職務経歴書）",
+    "resumesHint": "PDF・Word（.docx）／5MBまで／最大5件",
+    "dropHere": "またはここにファイルをドロップ",
+    "chooseFile": "ファイルを選ぶ",
+    "uploading": "アップロード中… {percent}%",
+    "uploaded": "アップロードしました",
+    "default": "メイン",
+    "setDefault": "メインにする",
+    "view": "ダウンロード",
+    "delete": "削除",
+    "confirmDelete": "このCVを削除しますか？",
+    "noResumes": "まだCVがありません。",
+    "backToMypage": "マイページに戻る",
+    "desiredPrefectures": "働きたい都道府県（複数選択可）",
+    "desiredHint": "{count, plural, =0 {選ばなければ全国から探します。} other {#件選択中}}"
+  },
+  "apply": {
+    "cta": "かんたん応募",
+    "loginToApply": "ログインして応募する",
+    "title": "この求人に応募する",
+    "chooseResume": "送るCV",
+    "noResume": "CVなしで応募する",
+    "uploadNew": "新しいCVをアップロード",
+    "message": "メッセージ（任意）",
+    "messagePlaceholder": "自己PRや、希望の勤務日数などをどうぞ",
+    "submit": "応募する",
+    "submitting": "送信中…",
+    "close": "閉じる",
+    "applied": "応募済み（マイページで確認）",
+    "success": "応募が完了しました！",
+    "successText": "選考の状況はマイページで確認できます。",
+    "toMypage": "マイページで確認",
+    "toProfile": "プロフィールを入力する",
+    "staffNote": "求職者アカウントでログインすると応募できます。"
+  },
+  "admin": {
+    "nav": {
+      "dashboard": "ダッシュボード",
+      "jobs": "求人管理",
+      "applications": "応募者・CV",
+      "places": "エリア管理",
+      "content": "コンテンツ・翻訳",
+      "users": "ユーザー・権限",
+      "backToSite": "サイトを見る",
+      "logout": "ログアウト",
+      "news": "お知らせ",
+      "inquiries": "企業お問い合わせ",
+      "analytics": "分析"
+    },
+    "roles": {
+      "super_admin": "スーパー管理者",
+      "recruiter_manager": "採用マネージャー",
+      "recruiter": "採用担当（自社求人のみ）",
+      "content_editor": "コンテンツ編集者",
+      "candidate": "求職者"
+    },
+    "common": {
+      "forbidden": "このページを表示する権限がありません。",
+      "total": "全{total}件",
+      "prev": "前へ",
+      "next": "次へ",
+      "pageOf": "{page} / {pages}",
+      "all": "すべて",
+      "noData": "データがありません",
+      "save": "保存",
+      "saved": "保存しました",
+      "cancel": "キャンセル",
+      "close": "閉じる",
+      "search": "検索",
+      "filter": "絞り込み",
+      "confirmDelete": "削除してよろしいですか？",
+      "delete": "削除",
+      "selectHint": "左の一覧から項目を選ぶと、ここに詳細が表示されます。"
+    },
+    "jobStatus": {
+      "draft": "下書き",
+      "pending": "承認待ち",
+      "published": "公開中",
+      "archived": "非公開"
+    },
+    "dashboard": {
+      "title": "ダッシュボード",
+      "welcome": "{email} でログイン中",
+      "pendingJobs": "承認待ちの求人",
+      "publishedJobs": "公開中の求人",
+      "draftJobs": "下書き",
+      "newApplications": "未対応の応募",
+      "applications7d": "直近7日の応募",
+      "quickLinks": "クイックリンク",
+      "newInquiries": "未対応の企業お問い合わせ"
+    },
+    "jobs": {
+      "title": "求人管理",
+      "new": "求人を作成",
+      "keyword": "求人番号・タイトルで検索",
+      "filterStatus": "状態",
+      "filterPrefecture": "都道府県",
+      "from": "作成日（から）",
+      "to": "作成日（まで）",
+      "code": "求人番号",
+      "jobTitle": "タイトル",
+      "status": "状態",
+      "prefecture": "勤務地",
+      "salary": "給与",
+      "applications": "応募",
+      "created": "作成日",
+      "views": "閲覧数"
+    },
+    "editor": {
+      "hourly": "時給",
+      "monthly": "月給",
+      "rejectPrompt": "差し戻しの理由を入力してください（担当者に表示されます）",
+      "submit": "承認申請する",
+      "publish": "承認して公開",
+      "reject": "差し戻す",
+      "withdraw": "申請を取り下げる",
+      "hide": "非公開にする",
+      "reopen": "再公開",
+      "toDraft": "下書きに戻す",
+      "back": "求人一覧",
+      "titleNew": "新しい求人",
+      "reviewNote": "差し戻し理由",
+      "sectionContent": "求人内容",
+      "title": "タイトル",
+      "description": "仕事内容",
+      "sectionCompany": "派遣先企業",
+      "endClientHint": "社内専用：求職者には絶対に表示されません",
+      "endClient": "実際の派遣先企業名",
+      "endClientAddress": "派遣先住所",
+      "internalNote": "社内メモ",
+      "displayName": "公開用の表示名",
+      "displayNameHint": "例：「大手自動車部品メーカー」。空欄の場合は「非公開」と表示されます。",
+      "displayLeak": "公開用の表示名に実際の企業名が含まれています。",
+      "sectionConditions": "募集条件",
+      "employmentType": "雇用形態",
+      "salaryType": "給与形態",
+      "salaryMin": "給与（下限・円）",
+      "salaryMax": "給与（上限・円）",
+      "prefecture": "勤務地（都道府県）",
+      "level": "日本語レベル",
+      "hoursPerWeek": "週の勤務時間",
+      "expires": "掲載終了日",
+      "transport": "交通費支給",
+      "visas": "対応ビザ",
+      "features": "こだわり条件",
+      "shift": "勤務時間・シフト",
+      "city": "市区町村",
+      "station": "最寄り駅"
+    },
+    "apps": {
+      "title": "応募者・CV管理",
+      "searchHint": "氏名・メール・求人番号",
+      "changeStatus": "選考ステータスを変更",
+      "recruiterNote": "社内メモ（求職者には表示されません）",
+      "notify": "ステータス変更を求職者にメールで通知する",
+      "profile": "プロフィール",
+      "nationality": "国籍",
+      "level": "日本語",
+      "visa": "在留資格",
+      "phone": "電話",
+      "location": "居住地",
+      "experience": "経験年数",
+      "coverMessage": "応募メッセージ",
+      "resume": "CV（履歴書）",
+      "download": "ダウンロード",
+      "noResume": "CVなしで応募されています。",
+      "docxNote": "Word形式はダウンロードして確認してください。",
+      "emails": "送信メール履歴",
+      "previewError": "CVを表示できませんでした。ダウンロードしてご確認ください。",
+      "pdfPages": "{total}ページ中{shown}ページを表示",
+      "history": "選考状況の履歴",
+      "deletedUser": "（不明）",
+      "resumeAccess": "CVの閲覧記録",
+      "viewed": "画面で閲覧",
+      "downloaded": "ダウンロード",
+      "levelNone": "日本語なし",
+      "years": "{n}年",
+      "emailStatus": {
+        "queued": "送信待ち",
+        "sent": "送信済み",
+        "failed": "送信失敗"
+      }
+    },
+    "places": {
+      "title": "エリア管理",
+      "hint": "地図・検索に表示するエリアのON/OFFと、各言語の名称を設定します。",
+      "visible": "表示",
+      "hidden": "非表示",
+      "editNames": "名称を編集"
+    },
+    "content": {
+      "title": "コンテンツ・翻訳",
+      "translations": "画面の文言（翻訳）",
+      "cms": "お知らせ・固定コンテンツ",
+      "targetLocale": "編集する言語",
+      "namespace": "画面",
+      "filterAll": "すべて",
+      "filterMissing": "未翻訳のみ",
+      "filterOverridden": "上書き済みのみ",
+      "override": "上書き",
+      "revert": "元に戻す",
+      "placeholderError": "変数 {expected} をそのまま含めてください。",
+      "syntaxError": "書式（{ } の対応など）が正しくありません。",
+      "cmsNew": "新規作成",
+      "cmsHint": "「home.notice」はトップページのお知らせ欄に表示されます。",
+      "published": "公開",
+      "unpublished": "非公開",
+      "cmsKey": "キー",
+      "keyHint": "英小文字・数字・. _ - のみ（例：home.notice）",
+      "cmsContent": "本文"
+    },
+    "users": {
+      "title": "ユーザー・権限",
+      "hint": "権限の変更は即時に反映され、対象ユーザーは再ログインが必要になります。",
+      "role": "権限",
+      "email": "メールアドレス",
+      "name": "氏名",
+      "active": "有効",
+      "lastLogin": "最終ログイン",
+      "self": "あなた",
+      "roleChanged": "{email} を更新しました"
+    },
+    "news": {
+      "title": "お知らせ管理",
+      "new": "新規作成",
+      "edit": "お知らせを編集",
+      "preview": "プレビュー",
+      "view": "サイトで見る",
+      "scheduled": "予約公開",
+      "status": {
+        "draft": "下書き",
+        "published": "公開",
+        "archived": "アーカイブ"
+      },
+      "fieldTitle": "タイトル",
+      "fieldSummary": "概要",
+      "summaryHint": "一覧に表示される短い説明です。",
+      "fieldBody": "本文",
+      "formatHint": "空行で段落を分けます。「## 」で見出し、「- 」で箇条書き、**太字**、[リンク文字](/jobs) が使えます。",
+      "fieldSlug": "URL（スラッグ）",
+      "slugHint": "半角英小文字・数字・ハイフンのみ。例: winter-jobs-2026",
+      "fieldStatus": "状態",
+      "fieldPublishedAt": "公開日時",
+      "publishedAtHint": "空欄のまま公開すると今すぐ公開されます。未来の日時にすると、その時刻に自動で公開されます。",
+      "searchPlaceholder": "タイトル・スラッグで検索"
+    },
+    "inquiries": {
+      "title": "企業お問い合わせ",
+      "searchHint": "会社名・担当者・メール",
+      "status": {
+        "new": "未対応",
+        "contacted": "対応中",
+        "closed": "完了"
+      },
+      "people": "{n}名",
+      "contact": "ご担当者",
+      "email": "メール",
+      "phone": "電話",
+      "prefecture": "勤務地",
+      "headcount": "募集人数",
+      "language": "言語",
+      "received": "受信日時",
+      "message": "お問い合わせ内容",
+      "statusLabel": "対応状況",
+      "note": "社内メモ",
+      "noteHint": "お客様には表示されません。",
+      "confirmDelete": "このお問い合わせを削除しますか？個人情報も削除され、元に戻せません。",
+      "kindLabel": "種類",
+      "kind": {
+        "employer": "企業",
+        "general": "一般"
+      }
+    },
+    "analytics": {
+      "title": "アクセス・応募分析",
+      "range": "期間",
+      "weeks": "{n}週間",
+      "showTable": "表で見る",
+      "showChart": "グラフで見る",
+      "note": "週は月曜始まり（日本時間）。閲覧数は求人詳細ページの表示回数です（同じ人の30分以内の再表示は1回）。閲覧数は2026年11月13日から集計しているため、それ以前の期間は応募率を「–」で表示します。",
+      "views30": "閲覧数（30日）",
+      "apps30": "応募数（30日）",
+      "conversion": "応募率（30日）",
+      "liveJobs": "掲載中の求人",
+      "signups30": "新規登録（30日）",
+      "weeklyTable": "週ごとの数値",
+      "weekOf": "週の開始日",
+      "applications": "応募数",
+      "views": "閲覧数",
+      "signups": "新規登録",
+      "appsWeekly": "週ごとの応募数",
+      "viewsWeekly": "週ごとの閲覧数",
+      "signupsWeekly": "週ごとの新規会員登録",
+      "byStatus": "応募の選考状況",
+      "topJobs": "よく見られている求人（30日）",
+      "job": "求人",
+      "viewsTotal": "累計閲覧数",
+      "byPrefecture": "都道府県別の応募数（90日）",
+      "empty": "まだデータがありません。",
+      "error": "分析データを読み込めませんでした。"
+    }
+  },
+  "account": {
+    "title": "アカウント設定",
+    "settingsCardTitle": "アカウント設定",
+    "settingsCardText": "メールアドレス・パスワード・SNS連携・退会",
+    "forgotTitle": "パスワードの再設定",
+    "forgotLead": "ご登録のメールアドレスを入力してください。再設定用のリンクをお送りします。",
+    "forgotSubmit": "再設定メールを送る",
+    "forgotSent": "ご登録のメールアドレスであれば、再設定用のリンクを送信しました。メールをご確認ください（30分間有効）。",
+    "backToLogin": "ログイン画面に戻る",
+    "resetTitle": "新しいパスワードの設定",
+    "resetLead": "新しいパスワードを入力してください。",
+    "newPassword": "新しいパスワード",
+    "confirmPassword": "新しいパスワード（確認）",
+    "currentPassword": "現在のパスワード",
+    "passwordMismatch": "確認用のパスワードが一致しません。",
+    "resetSubmit": "パスワードを変更する",
+    "resetDone": "パスワードを変更しました。新しいパスワードでログインしてください。",
+    "invalidLink": "リンクが無効か、有効期限が切れています。",
+    "requestNewLink": "もう一度メールを送る",
+    "verifyTitle": "メールアドレスの確認",
+    "verifying": "確認しています…",
+    "verifiedDone": "メールアドレスの確認が完了しました。",
+    "emailChangedDone": "メールアドレスを {email} に変更しました。",
+    "toMypage": "マイページへ",
+    "bannerUnverified": "メールアドレスの確認が完了していません。届いたメールのリンクを開いてください。",
+    "resend": "確認メールを再送",
+    "resent": "確認メールを送りました。メールボックスをご確認ください。",
+    "emailSection": "メールアドレス",
+    "currentEmail": "現在：",
+    "verified": "確認済み",
+    "unverified": "未確認",
+    "newEmail": "新しいメールアドレス",
+    "changeEmailSubmit": "確認メールを送る",
+    "changeEmailSent": "{email} に確認メールを送りました。リンクを開くと変更が完了します。",
+    "passwordSection": "パスワードの変更",
+    "setPasswordSection": "パスワードの設定",
+    "setPasswordLead": "Google・Appleでログインしているアカウントです。パスワードを設定すると、メールアドレスでもログインできます。",
+    "changePasswordSubmit": "パスワードを保存",
+    "passwordChanged": "パスワードを保存しました。ほかの端末からはログアウトしました。",
+    "linkedSection": "SNS連携",
+    "linkedLead": "Google・Appleアカウントを連携すると、ワンタップでログインできます。",
+    "link": "連携する",
+    "unlink": "連携を解除",
+    "linkedDone": "{provider}アカウントを連携しました。",
+    "unlinkedDone": "{provider}アカウントの連携を解除しました。",
+    "deleteSection": "退会（アカウント削除）",
+    "deleteLead": "プロフィール・CV・応募履歴がすべて削除されます。この操作は元に戻せません。",
+    "deleteConfirmEmail": "確認のため、メールアドレスを入力してください",
+    "deleteAgree": "内容を理解し、アカウントを削除します",
+    "deleteSubmit": "アカウントを削除する",
+    "deletedDone": "退会手続きが完了しました。これまでご利用いただき、ありがとうございました。"
+  },
+  "newsPage": {
+    "title": "お知らせ",
+    "lead": "ハケンワークからの最新情報をお届けします。",
+    "empty": "お知らせはまだありません。",
+    "loadError": "お知らせを読み込めませんでした。時間をおいて再度お試しください。",
+    "backToList": "お知らせ一覧へ",
+    "notTranslated": "このお知らせはまだお使いの言語に翻訳されていません。",
+    "pagination": "ページ送り",
+    "prev": "前のページ",
+    "next": "次のページ",
+    "seeAll": "すべて見る"
+  },
+  "employersPage": {
+    "metaTitle": "企業の方へ｜外国人材の派遣・紹介",
+    "eyebrow": "外国人材の採用をサポート",
+    "heroTitle": "人手不足のお悩みを、外国人スタッフの採用で解決しませんか。",
+    "heroLead": "ハケンワークは、日本で働きたい外国人と企業をつなぐ派遣・紹介サービスです。在留資格の確認から就業後のフォローまで、まとめてお任せください。",
+    "cta": "無料で相談する",
+    "stats": {
+      "languages": {
+        "label": "対応言語",
+        "value": "6言語"
+      },
+      "prefectures": {
+        "label": "対応エリア",
+        "value": "47都道府県"
+      },
+      "support": {
+        "label": "ご返信",
+        "value": "2営業日以内"
+      }
+    },
+    "benefitsTitle": "ハケンワークが選ばれる理由",
+    "benefits": {
+      "speed": {
+        "title": "スピーディーな人材紹介",
+        "body": "全国の登録者から、ご希望の条件に合う方をすばやくご紹介します。急な増員にも対応します。"
+      },
+      "languages": {
+        "title": "6言語で求職者をサポート",
+        "body": "ベトナム語・ミャンマー語・ネパール語・ベンガル語・英語でスタッフに説明するので、ミスマッチや早期離職を防ぎます。"
+      },
+      "visa": {
+        "title": "在留資格を事前に確認",
+        "body": "就労できる在留資格かどうかを確認してからご紹介します。不法就労のリスクを減らせます。"
+      },
+      "support": {
+        "title": "就業後もしっかりフォロー",
+        "body": "勤怠や生活面の相談は当社スタッフが対応します。現場のご担当者様の負担を減らします。"
+      }
+    },
+    "industriesTitle": "このような業種で多く働いています",
+    "industries": {
+      "factory": "製造・工場",
+      "logistics": "倉庫・物流",
+      "food": "食品加工",
+      "hotel": "ホテル・旅館",
+      "cleaning": "清掃",
+      "construction": "建設",
+      "care": "介護",
+      "retail": "小売・飲食"
+    },
+    "flowTitle": "ご利用の流れ",
+    "steps": {
+      "contact": {
+        "title": "お問い合わせ",
+        "body": "下のフォームから、お気軽にご連絡ください。"
+      },
+      "hearing": {
+        "title": "ヒアリング",
+        "body": "業務内容・人数・時期・条件をお伺いします。"
+      },
+      "contract": {
+        "title": "ご契約",
+        "body": "お見積りにご納得いただけたら、契約を結びます。"
+      },
+      "matching": {
+        "title": "人材のご紹介",
+        "body": "条件に合う方を選び、面談・職場見学を調整します。"
+      },
+      "start": {
+        "title": "就業開始",
+        "body": "就業後も定期的にフォローします。"
+      }
+    },
+    "faqTitle": "よくあるご質問",
+    "faq": {
+      "cost": {
+        "q": "料金はいくらですか？",
+        "a": "派遣・紹介の形態や人数、勤務条件によって異なります。お問い合わせいただければ、お見積りをお送りします。ご相談は無料です。"
+      },
+      "visa": {
+        "q": "どのような在留資格の方を紹介してもらえますか？",
+        "a": "永住者・定住者・日本人の配偶者等・特定技能など、就労が認められている方をご紹介します。留学生の場合は資格外活動許可の範囲（原則週28時間以内）でのご紹介です。"
+      },
+      "japanese": {
+        "q": "日本語はどのくらい話せますか？",
+        "a": "日常会話レベル（N4程度）から、ビジネスレベル（N2以上）の方まで登録しています。業務に必要なレベルをお伺いしてご紹介します。"
+      },
+      "trouble": {
+        "q": "就業後にトラブルがあったらどうなりますか？",
+        "a": "当社の担当者がスタッフの母国語で相談を受け、解決をサポートします。現場だけで抱え込む必要はありません。"
+      },
+      "area": {
+        "q": "地方の事業所でも依頼できますか？",
+        "a": "はい、全国47都道府県でご相談を承っています。寮付きのお仕事は特に応募が集まりやすい傾向があります。"
+      }
+    },
+    "formTitle": "お問い合わせフォーム",
+    "formLead": "内容を確認のうえ、担当者より2営業日以内にご連絡いたします。",
+    "form": {
+      "required": "必須",
+      "optional": "任意",
+      "company": "会社名",
+      "contact": "ご担当者名",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "prefecture": "勤務地（都道府県）",
+      "prefectureAny": "未定・複数",
+      "headcount": "募集人数",
+      "message": "お問い合わせ内容",
+      "messageHint": "業務内容・時期・勤務時間など、分かる範囲でご記入ください（2,000文字まで）。",
+      "agree": "入力した情報を<link>プライバシーポリシー</link>に従って利用することに同意します。",
+      "submit": "送信する",
+      "doneTitle": "お問い合わせを受け付けました",
+      "doneBody": "ご入力のメールアドレスに確認メールをお送りしました。担当者より2営業日以内にご連絡いたします。"
+    }
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "text": "URLが間違っているか、ページが削除された可能性があります。",
+    "home": "トップへ",
+    "jobs": "求人を探す"
+  },
+  "pages": {
+    "notTranslated": "このページはまだお使いの言語に翻訳されていないため、日本語で表示しています。",
+    "preparing": "このページは準備中です。",
+    "about": {
+      "title": "会社概要"
+    },
+    "privacy": {
+      "title": "プライバシーポリシー"
+    },
+    "terms": {
+      "title": "利用規約"
+    }
+  },
+  "faqPage": {
+    "title": "よくある質問",
+    "lead": "お仕事探しや応募について、よくいただく質問をまとめました。",
+    "groups": {
+      "start": "はじめての方",
+      "apply": "応募について",
+      "work": "働き方・在留資格",
+      "account": "アカウント"
+    },
+    "items": {
+      "free": {
+        "q": "登録や応募にお金はかかりますか？",
+        "a": "いいえ。会員登録・求人への応募は無料です。"
+      },
+      "noJapanese": {
+        "q": "日本語が話せなくても応募できますか？",
+        "a": "はい。「日本語不問」の求人もあります。求人一覧の「日本語レベル」で、あなたのレベルに合う求人だけを表示できます。"
+      },
+      "abroad": {
+        "q": "海外に住んでいても応募できますか？",
+        "a": "現在は、日本に住んでいて、働くことができる在留資格をお持ちの方を対象としています。"
+      },
+      "how": {
+        "q": "どうやって応募しますか？",
+        "a": "求人ページの「応募する」ボタンを押し、ログイン（または会員登録）してプロフィールを入力すると、そのまま応募できます。"
+      },
+      "cv": {
+        "q": "CV（履歴書）は必要ですか？",
+        "a": "なくても応募できますが、あると選考が早く進みます。PDFまたはWord（5MBまで）を最大5件登録できます。"
+      },
+      "status": {
+        "q": "応募の結果はどこで分かりますか？",
+        "a": "マイページで選考状況を確認できます。状況が変わるとメールでもお知らせします。"
+      },
+      "cancel": {
+        "q": "応募を取り消したいです。",
+        "a": "お手数ですが、お問い合わせフォームからご連絡ください。"
+      },
+      "visa": {
+        "q": "どの在留資格で働けますか？",
+        "a": "在留資格によって、できる仕事や時間が決まっています。「ビザについて」のページで説明しています。"
+      },
+      "dormitory": {
+        "q": "寮のある仕事はありますか？",
+        "a": "あります。求人一覧の「こだわり条件」で「寮・社宅あり」を選んでください。"
+      },
+      "pay": {
+        "q": "お給料はいつ、どうやってもらえますか？",
+        "a": "支払日や方法は求人・契約によって異なります。面接や契約のときに必ず確認してください。"
+      },
+      "password": {
+        "q": "パスワードを忘れました。",
+        "a": "ログイン画面の「パスワードをお忘れの方」から、再設定用のメールを受け取れます。"
+      },
+      "delete": {
+        "q": "退会したいです。",
+        "a": "マイページ →「アカウント設定」→「退会する」から手続きできます。登録情報とCVは削除されます。"
+      }
+    },
+    "more": "ここにない質問は、",
+    "contactLink": "お問い合わせフォームからどうぞ"
+  },
+  "visaPage": {
+    "title": "ビザ（在留資格）について",
+    "lead": "日本で働けるかどうか、どんな仕事ができるかは、在留資格によって決まっています。応募の前に、あなたの在留資格でできることを確認しましょう。",
+    "groups": {
+      "free": {
+        "title": "仕事の種類に制限がない在留資格",
+        "body": "永住者・日本人の配偶者等・永住者の配偶者等・定住者などは、仕事の種類や時間に制限がなく、派遣やアルバイトでも働けます。"
+      },
+      "limited": {
+        "title": "決められた仕事だけできる在留資格",
+        "body": "特定技能・技術・人文知識・国際業務・技能実習などは、許可された分野や仕事内容でのみ働けます。仕事を変えるときは、その仕事が在留資格で認められているか事前に確認が必要です。技能実習の方は、原則として実習先以外では働けません。"
+      },
+      "permission": {
+        "title": "許可を取れば短時間だけ働ける在留資格",
+        "body": "留学・家族滞在の方は、「資格外活動許可」を取ると、原則として週28時間以内で働けます（留学生は学校の長期休暇中、1日8時間まで）。風俗営業に関係する仕事はできません。"
+      }
+    },
+    "checkTitle": "確認しておきたいこと",
+    "check": {
+      "card": "在留カードの「就労制限の有無」欄と、裏面の「資格外活動許可欄」を確認しましょう。",
+      "expiry": "在留期間が切れる前に更新の申請をしましょう（期限の約3か月前から申請できます）。",
+      "change": "就労系の在留資格の方は、勤め先が変わったら14日以内に出入国在留管理庁へ届け出が必要です。"
+    },
+    "disclaimer": "このページは一般的な説明です。あなたのケースについては、出入国在留管理庁または専門家に確認してください。",
+    "isaLink": "出入国在留管理庁のサイト"
+  },
+  "prefecturesPage": {
+    "title": "都道府県から探す",
+    "lead": "働きたい地域を選んでください。数字は現在募集中の求人数です。"
+  },
+  "contactPage": {
+    "title": "お問い合わせ",
+    "lead": "ご質問・ご意見はこちらからお送りください。",
+    "faqTitle": "よくある質問",
+    "faqText": "まずはこちらで答えが見つかるかもしれません。",
+    "employersTitle": "企業の方へ",
+    "employersText": "人材のご相談は専用フォームからどうぞ。",
+    "formTitle": "お問い合わせフォーム",
+    "formLead": "担当者より2営業日以内にご連絡いたします。",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "message": "お問い合わせ内容",
+      "messageHint": "2,000文字まで",
+      "agree": "<link>プライバシーポリシー</link>に同意します。",
+      "submit": "送信する",
+      "doneTitle": "お問い合わせを受け付けました",
+      "doneBody": "確認メールをお送りしました。担当者よりご連絡いたします。"
+    }
+  }
+}

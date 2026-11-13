@@ -1,0 +1,352 @@
+GHI CHÚ DỰ ÁN WEBSITE TUYỂN DỤNG HAKEN (cập nhật ngày 13/11/2026)
+
+======================================================================
+PHẦN 1. NHỮNG VIỆC CHƯA LÀM / CẦN LƯU Ý
+======================================================================
+
+A. Tài khoản & Email  -> [ĐÃ XONG] (xem backend/README.md, mục "Accounts & email")
+  - [ĐÃ XONG] Xác minh email: đăng ký xong gửi link (24 giờ). Mypage hiện
+    banner "chưa xác nhận" + nút gửi lại. Trang /<lang>/verify-email.
+  - [ĐÃ XONG] Quên mật khẩu / đặt lại: /<lang>/forgot-password (link 30 phút),
+    /<lang>/reset-password. Đặt lại xong -> đăng xuất mọi thiết bị.
+  - [ĐÃ XONG] Email thông báo: xác minh, đặt lại MK, đã đổi MK, đổi email
+    (gửi tới email MỚI + báo cho email CŨ), đã nộp đơn, đổi trạng thái đơn
+    (có sẵn từ Phase 5), đã xóa tài khoản. 6 ngôn ngữ.
+    Dev hiện gửi THẬT qua Gmail SMTP (đã test OK, ~500 email/ngày).
+    CÒN LẠI cho production: dùng Amazon SES Tokyo hoặc Resend với domain
+    riêng + SPF/DKIM/DMARC (Gmail cá nhân dễ vào spam, không hợp production).
+  - [ĐÃ XONG] Liên kết Google/Apple: trong /<lang>/mypage/account (nút "Liên
+    kết"/"Hủy liên kết"). Email đã xác minh thì đăng nhập Google cùng email
+    cũng tự liên kết. Không cho hủy liên kết nếu đó là cách đăng nhập cuối.
+    (Vẫn cần GOOGLE_*/APPLE_* thật, xem mục B.)
+  - [ĐÃ XONG] Đổi mật khẩu, đổi email, xóa tài khoản (APPI) tại
+    /<lang>/mypage/account. Xóa = xóa hồ sơ, CV (cả file trên S3), đơn ứng
+    tuyển, phiên đăng nhập; email trong email_logs được ẩn. Tài khoản
+    staff không tự xóa được (admin xóa).
+  - [GIỮ NGUYÊN, CÓ CHỦ Ý] API đăng ký vẫn trả 409 khi email đã tồn tại
+    (để đăng ký 1 bước, nộp đơn ngay). Đã giới hạn 10 lần/giờ/IP. Đăng nhập
+    và quên mật khẩu KHÔNG để lộ email nào đã đăng ký. Nếu muốn chặn hẳn:
+    đổi sang "đăng ký -> phải bấm link trong email mới dùng được".
+  - Lưu ý: link trong email dựng từ FRONTEND_URL. start-dev.ps1 tự ghi
+    FRONTEND_URL (link tunnel khi có -Tunnel, nếu không là localhost:3111).
+
+B. OAuth (Google / Apple)
+  - [ĐÃ XONG] Google: đã test đăng nhập thật thành công (GOOGLE_* trong backend/.env).
+    LƯU Ý: link tunnel đổi mỗi lần chạy start-dev -Tunnel -> phải thêm redirect URI
+    mới vào Google Cloud Console (script in sẵn URI cần thêm). Muốn hết phiền:
+    mua domain + Cloudflare named tunnel để có link cố định.
+    App Google đang Testing hay Published: kiểm tra mục "OAuth consent screen".
+  - Apple: CHƯA làm (cần Apple Developer 99 USD/năm). Biến môi trường:
+      APPLE_CLIENT_ID, APPLE_TEAM_ID, APPLE_KEY_ID, APPLE_PRIVATE_KEY
+  - Redirect URI cần khai báo với Google/Apple:
+      <FRONTEND_URL>/api/v1/auth/oauth/google/callback
+      <FRONTEND_URL>/api/v1/auth/oauth/apple/callback
+  - Apple yêu cầu domain HTTPS thật, không test được trên localhost.
+
+C. Bảo mật / Hạ tầng (cần trước khi lên production)
+  - Rate limit đang lưu trong bộ nhớ của 1 tiến trình. Chạy nhiều
+    worker/nhiều máy thì phải chuyển sang Redis.
+  - Chưa có quét virus cho CV (nên thêm ClamAV hoặc S3 malware scan).
+    Kiểm tra magic bytes không thay thế được antivirus.
+  - Chưa có CAPTCHA. Khóa 5 lần sai/email có thể bị kẻ xấu lợi dụng để
+    khóa tạm tài khoản người khác -> nên thêm CAPTCHA (Turnstile).
+  - Chưa cấu hình Nginx: cần client_max_body_size 6m, HTTPS, chuyển
+    /api về FastAPI, các header bảo mật (CSP, HSTS).
+  - Chưa có Docker / docker-compose (Docker Desktop chưa bật).
+    Chưa test với MinIO thật (đang dùng moto giả lập S3).
+  - Chưa cấu hình Cloudflare.
+  - Production BẮT BUỘC: APP_ENV=production, JWT_SECRET >= 32 ký tự,
+    COOKIE_SECURE=true (mặc định khi không phải development).
+  - Nên đổi tên cookie sang tiền tố __Host- khi chạy HTTPS.
+  - [ĐÃ XONG] Log truy cập CV lưu vào bảng resume_access_logs (ai, vai trò, lúc
+    nào, IP). Quản lý / super admin xem ở chi tiết đơn ứng tuyển.
+  - [ĐÃ XONG] Lệnh dọn dẹp: backend\.venv\Scripts\python -m app.maintenance
+    (thêm --dry-run để chỉ đếm). Xóa refresh token / link email hết hạn >7 ngày,
+    liên hệ đã "完了" quá INQUIRY_RETENTION_DAYS (mặc định 365 ngày), email_logs
+    quá EMAIL_LOG_RETENTION_DAYS (730). CẦN: đặt lịch chạy mỗi ngày (Task
+    Scheduler trên Windows / cron trên server) - chưa đặt.
+  - Chưa có giám sát / cảnh báo (monitoring, Sentry...).
+
+D. Database
+  - [ĐÃ XONG] Đã dùng Alembic (xem backend/README.md). Sửa schema theo 3 bước:
+    sửa app/models.py -> alembic revision --autogenerate -m "..." -> alembic upgrade head.
+    DB tạo trước khi có Alembic: chạy app.migrate_phase5 (nếu cần) rồi "alembic stamp head".
+  - DB dev: dữ liệu ở e:\Ky4-KyThucTapTotNghiep\pgdata-dev (cổng 55432, user
+    postgres, không mật khẩu, chỉ nghe localhost). Đã chuyển khỏi thư mục Temp
+    nên không còn bị mất. Xem bằng pgAdmin 4 (localhost:55432, DB recruit).
+  - S3 dev là moto (bộ nhớ RAM): tắt moto là MẤT file CV đã tải lên, trong khi
+    bảng resumes vẫn còn dòng -> tải CV cũ sẽ lỗi. Muốn giữ file: dùng MinIO.
+  - Tài khoản admin: superadmin@example.com (super_admin). Đặt mật khẩu bằng
+    backend\.venv\Scripts\python -m app.create_staff superadmin@example.com super_admin
+  - [ĐÃ XONG] Giới hạn CV trong DB = 5MB, khớp với API.
+  - [ĐÃ XONG] Bảng application_status_history: ghi mỗi lần đổi trạng thái (ai,
+    lúc nào). Đơn cũ đã được điền lại (người đổi = "không rõ").
+  - [ĐÃ XONG] jobs.expires_at: job quá hạn tự ẩn khỏi danh sách, chi tiết, bản đồ,
+    job đã lưu, và không ứng tuyển được nữa.
+  - Tên tỉnh trong DB mới có tiếng Nhật và tiếng Anh (frontend tự hiển thị đúng
+    6 ngôn ngữ nên không ảnh hưởng người dùng; admin sửa được ở エリア管理).
+
+E. Chức năng chưa làm
+  - [ĐÃ XONG] Trang Admin / Recruiter (có từ Phase 5: /admin).
+  - [ĐÃ XONG] Các trang: /about, /privacy, /terms (nội dung trong CMS, sửa ở Admin
+    -> コンテンツ・翻訳 -> CMS, key page.about / page.privacy / page.terms),
+    /faq, /visa (giải thích tư cách lưu trú + link lọc job theo visa),
+    /jobs/prefectures (47 tỉnh + số job), /contact (form liên hệ chung, vào
+    chung hộp thư /admin/inquiries, loại "一般").
+    !!! /about, /privacy, /terms là VĂN BẢN MẪU có chỗ 【...】 cần điền (tên công
+    ty, địa chỉ, số giấy phép 派遣/紹介...). Chính sách bảo mật và điều khoản
+    NÊN được luật sư / 社労士 xem lại trước khi chạy thật.
+    Nội dung /visa và /faq là hướng dẫn chung -> nên được người phụ trách duyệt.
+  - [ĐÃ XONG] Trang chủ hiện 3 tin mới nhất.
+  - [ĐÃ XONG] お知らせ (/news, /news/<slug>): danh sách + chi tiết, 6 ngôn ngữ
+    (thiếu bản dịch thì hiện tiếng Nhật + ghi chú). Admin: /admin/news (viết,
+    xem trước, hẹn giờ đăng, lưu trữ) cho content_editor / super_admin.
+    Nội dung dạng chữ đơn giản (## tiêu đề, - danh sách, **đậm**, [link](/jobs)),
+    KHÔNG nhận HTML -> không có nguy cơ XSS. 4 tin mẫu trong app/seed_news.py.
+    CÒN LẠI: chưa có ảnh bìa (cột cover_image_key có sẵn nhưng chưa có upload),
+    trang chủ chưa hiện "tin mới nhất".
+  - [ĐÃ XONG] 企業の方へ (/employers): giới thiệu dịch vụ, quy trình, FAQ, form liên
+    hệ (bảng employer_inquiries). Gửi xong: email báo admin (ADMIN_NOTIFY_EMAIL
+    trong backend/.env) + email xác nhận cho doanh nghiệp (ja/en/vi; my/ne/bn
+    dùng tiếng Anh; KHÔNG chép lại nội dung người gửi để chống spam).
+    Chống bot: ô ẩn (honeypot) + giới hạn số lần. Admin: /admin/inquiries
+    (recruiter_manager, super_admin; quyền mới inquiries.manage).
+    CÒN LẠI / LƯU Ý:
+      * Nội dung trang (lợi ích, ngành nghề, "trả lời trong 2 ngày làm việc",
+        "tư vấn miễn phí") là văn bản mẫu -> chủ doanh nghiệp cần duyệt lại.
+      * Công ty phái cử (派遣) phải công khai số giấy phép 労働者派遣事業許可番号
+        (派-xx-xxxxxx) và 有料職業紹介事業許可番号 trên website -> cần thêm khi có.
+      * Ô đồng ý ở form nên link tới trang /privacy (trang này chưa có).
+      * Dữ liệu liên hệ là thông tin cá nhân (APPI): xóa khi không còn cần
+        (nút Xóa trong admin cũng ẩn email trong email_logs). Chưa có tự động xóa.
+  - [ĐÃ SỬA] Lỗi trang 404 (2 thẻ <html>): thêm app/layout.tsx, app/not-found.tsx,
+    app/[locale]/not-found.tsx (404 có menu + đúng ngôn ngữ), [locale]/[...rest].
+  - [ĐÃ XONG] /jobs: phân trang 20 job/trang + bộ lọc (trình độ tiếng Nhật,
+    tư cách lưu trú, lương giờ tối thiểu, hình thức, ký túc xá/đặc điểm, sắp xếp
+    theo lương). API mới: GET /api/v1/jobs/search. Form lọc chạy cả khi tắt JS.
+  - [ĐÃ XONG] Hồ sơ: ô "tỉnh muốn làm việc" (chọn nhiều).
+  - [ĐÃ XONG] Lưu job yêu thích (♡ trên thẻ job và trang chi tiết; xem ở
+    /mypage/saved; tối đa 200; bảng saved_jobs). Chỉ ứng viên.
+  - CHƯA LÀM (cần quyết định): ứng viên tự hủy đơn ứng tuyển (hiện FAQ hướng dẫn
+    liên hệ qua form); ảnh bìa tin tức.
+
+  NÂNG CẤP ĐỢT 1 (2026-11-13) - [ĐÃ XONG, 137 test backend + 23 bước E2E đạt]
+  - Trang chi tiết job: thu nhập ước tính/tháng (lương giờ trung bình x giờ/tuần
+    x 52/12, làm tròn xuống 1,000円, ghi rõ "trước thuế, chưa gồm tăng ca"),
+    ga gần nhất, hạn nộp đơn (nếu job có expires_at), nút chia sẻ (LINE,
+    Facebook, X, sao chép link, nút chia sẻ của điện thoại), "Việc làm ở khu vực
+    gần" (cùng tỉnh trước, rồi cùng vùng), "Việc đã xem gần đây".
+  - SEO: dữ liệu JobPosting (JSON-LD) cho Google for Jobs. Công ty tuyển dụng
+    = tên website (ハケンワーク), KHÔNG BAO GIỜ là tên công ty phái cử thật (đã
+    test). Khi có domain thật: đăng ký Google Search Console để Google đọc.
+  - Thẻ job: nhãn NEW (đăng trong 7 ngày), ga gần nhất, thu nhập ước tính.
+  - /jobs và trang chi tiết: "Việc làm đã xem gần đây" (lưu trong trình duyệt,
+    tối đa 10, có nút xóa lịch sử; không gửi lên server).
+  - Mypage: "Việc làm gợi ý cho bạn" - theo trình độ tiếng Nhật, tư cách lưu trú,
+    tỉnh mong muốn (ưu tiên) / tỉnh đang sống; bỏ job đã ứng tuyển.
+    API: GET /api/v1/me/recommended-jobs, GET /api/v1/jobs/{code}/similar.
+  - Admin -> trình soạn job: thêm ô "最寄り駅" (ga gần nhất, nhiều ngôn ngữ).
+    15 job mẫu đã được điền ga gần nhất (seed chỉ điền ô đang trống).
+  - [ĐÃ SỬA] Lỗi hydration React ở trang tiếng Nepal / Myanmar (server in chữ số
+    bản địa, trình duyệt in chữ số Latin -> lệch). Nay MỌI ngôn ngữ dùng chữ số
+    Latin cho số và ngày (src/lib/format.ts, hàm latn). Muốn quay lại chữ số bản
+    địa cho bn thì báo AI (ne/my thì không nên vì sẽ lỗi lại).
+
+  NÂNG CẤP ĐỢT 2 (2026-11-13) - [ĐÃ XONG, 139 test backend + 13 bước E2E đạt]
+  - Đếm lượt xem job: trình duyệt báo 1 lần khi mở trang chi tiết (mỗi tab 1 lần;
+    server bỏ qua nếu cùng người xem lại trong 30 phút; tối đa 300 lượt/giờ/IP).
+    Chỉ lưu SỐ ĐẾM theo ngày (bảng job_views_daily) - không lưu IP/cookie/user.
+    Bot không chạy JavaScript sẽ không được tính. Bắt đầu đếm từ 2026-11-13.
+    API: POST /api/v1/jobs/{id}/views (không cần CSRF vì không đổi dữ liệu người dùng).
+  - Admin -> 分析 (/admin/analytics): lượt xem / đơn ứng tuyển / tỉ lệ ứng tuyển /
+    job đang đăng / đăng ký mới (30 ngày); biểu đồ theo tuần (4/12/26 tuần, có
+    nút "表で見る" xem dạng bảng); trạng thái đơn; 10 job được xem nhiều nhất;
+    đơn theo tỉnh (90 ngày). Recruiter chỉ thấy job của mình và không thấy số
+    đăng ký mới toàn công ty. Danh sách job trong admin có cột 閲覧数.
+  - [ĐÃ SỬA - quan trọng] API trước đây thấy MỌI người dùng là 1 IP (127.0.0.1)
+    vì trình duyệt đi qua proxy của Next -> giới hạn đăng nhập/đăng ký/form liên
+    hệ bị tính CHUNG cho cả website. Nay start-dev.ps1 chạy uvicorn với
+    --proxy-headers --forwarded-allow-ips 127.0.0.1 (đã test: 2 người khác IP
+    được tính riêng). KHI LÊN SERVER THẬT: uvicorn phải có 2 cờ này, với IP
+    của proxy đứng ngay trước nó (Next / Nginx); KHÔNG dùng "*" (cho phép giả IP).
+
+  KIỂM TRA GIAO DIỆN ADMIN (2026-11-13) - 11 trang x (PC + điện thoại) x ja/vi/my
+  - Không có lỗi JavaScript, không có API lỗi, không còn trang tràn ngang.
+  - Đã sửa: thanh lọc 求人管理 tràn ra ngoài khung (ô ngày); ダッシュボード 6 thẻ
+    trên 1 hàng; trang お問い合わせ / お知らせ có khung "chọn mục bên trái" thay
+    vì nửa trang trống; ô tìm kiếm お知らせ có chữ gợi ý; bộ lọc ユーザー không
+    còn kéo dài hết hàng; chi tiết ứng viên: lịch sử email hiện nhãn trạng thái
+    + "送信済み" (trước là mã "applied"/"sent"), quốc tịch hiện tên nước (VN ->
+    ベトナム), "日本語なし" thay cho "不問", kinh nghiệm "3年"; danh sách job trên
+    điện thoại: mã job nằm dưới tiêu đề; trang 分析: chữ trên biểu đồ đọc được
+    trên điện thoại, bảng job xem nhiều không bị cắt cột.
+  - Lưu ý: trang admin bằng tiếng my/ne/bn phần lớn hiện tiếng Nhật (chưa dịch,
+    vì admin là nhân viên công ty). Ô chọn ngày hiện theo ngôn ngữ trình duyệt.
+  - Dữ liệu thử còn sót trong DB dev: job "E2Eテスト求人...", user
+    cand-...@example.com, dbg-...@example.com, e2e-...@example.com -> có thể khóa
+    (tắt 有効) ở /admin/users và ẩn job ở /admin/jobs.
+
+  - Ý TƯỞNG NÂNG CẤP TIẾP (chưa làm, chọn rồi báo AI):
+      * Email thông báo job mới theo điều kiện đã lưu (job alert) - cần email
+        domain riêng để không vào spam khi gửi nhiều.
+      * Ứng viên tự hủy đơn (chờ quyết định ở mục H.6a).
+      * Ảnh bìa tin tức / ảnh nơi làm việc cho job (cần nơi lưu ảnh: S3/MinIO).
+      * So sánh job, lọc theo ga / tuyến tàu, bản đồ Google Maps (Maps có phí
+        khi vượt hạn mức miễn phí).
+
+F. Nội dung / Dịch thuật
+  - Bản dịch tiếng Myanmar (my), Nepal (ne), Bangladesh (bn) do AI dịch,
+    CẦN người bản ngữ kiểm tra, nhất là thông báo lỗi và điều khoản.
+  - [ĐÃ ĐỔI] Số/lương/ngày ở mọi ngôn ngữ hiện chữ số Latin (1,200) - xem
+    "NÂNG CẤP ĐỢT 1" ở mục E.
+  - Tiêu đề/mô tả job mẫu chỉ có ja, en, vi; các ngôn ngữ khác hiện
+    tiếng Nhật.
+
+
+G. Cách chạy dự án (máy dev)
+  - Bật:  nhấp đúp start-dev.cmd (hoặc: .\start-dev.cmd -Tunnel / -Build)
+      -Tunnel : mở link công khai Cloudflare, tự cập nhật FRONTEND_URL.
+      -Build  : build lại frontend (BẮT BUỘC sau khi sửa code frontend).
+    Mỗi dịch vụ mở 1 cửa sổ riêng (moto, API, Next, tunnel); lỗi xem ở đó.
+  - Tắt:  nhấp đúp stop-dev.cmd (dữ liệu DB được giữ nguyên).
+  - Sửa code backend -> chạy lại start-dev (script tự khởi động lại API).
+  - JWT_SECRET và S3_* đã nằm trong backend/.env (file này KHÔNG đưa lên git).
+    Đổi JWT_SECRET = mọi người bị đăng xuất.
+  - Đường dẫn cứng trong script (đổi nếu chuyển máy): PostgreSQL 18 bin,
+    e:\Ky4-KyThucTapTotNghiep\pgdata-dev, C:\Users\Admin\tools\cloudflared.exe.
+
+H. VIỆC BẠN TỰ LÀM - MIỄN PHÍ (làm trước)
+  [ ] 1. Đặt mật khẩu superadmin (nếu chưa):
+         backend\.venv\Scripts\python -m app.create_staff superadmin@example.com super_admin
+  [ ] 2. Điền 【...】 trong /about, /privacy, /terms: Admin -> コンテンツ・翻訳 -> tab CMS
+         -> key page.about / page.privacy / page.terms -> sửa tab 日本語 (và EN, VI) -> 保存.
+  [ ] 3. Đọc lại và sửa chữ trên /faq, /visa, /employers: Admin -> コンテンツ・翻訳 -> tab 翻訳
+         -> Namespace faqPage / visaPage / employersPage -> chọn ngôn ngữ -> sửa -> 保存.
+  [ ] 4. Xóa liên hệ thử "E2E テスト" ở /admin/inquiries.
+         Và ẩn (アーカイブ) các job thử tên "E2Eテスト求人 ..." ở /admin/jobs - chúng
+         còn sót từ lần test trước và ĐANG HIỆN CÔNG KHAI trên /jobs và mục gợi ý.
+  [ ] 5. Đặt lịch dọn dẹp mỗi ngày 3:00 (chạy được khi máy bật + PostgreSQL đang chạy):
+         schtasks /Create /TN "HakenWork Maintenance" /SC DAILY /ST 03:00 /TR "e:\Ky4-KyThucTapTotNghiep\WebsiteRecruitment\maintenance.cmd"
+         Kết quả ghi ở backend\maintenance.log. Xóa lịch: schtasks /Delete /TN "HakenWork Maintenance"
+  [ ] 6. Quyết định (trả lời cho AI để làm tiếp):
+         a. Có cho ứng viên tự hủy đơn ứng tuyển không?
+         b. [ĐÃ LÀM] Chữ số Latin cho mọi ngôn ngữ (bắt buộc với my/ne để hết lỗi;
+            bn cũng đổi cho thống nhất - muốn giữ chữ số Bengal thì báo AI).
+         c. Chọn nâng cấp tiếp theo trong "Ý TƯỞNG NÂNG CẤP TIẾP" (mục E).
+  [ ] 7. Nhờ người bản ngữ (bạn bè, đồng nghiệp) đọc bản my / ne / bn: Admin -> コンテンツ・翻訳
+         -> 翻訳 -> chọn MY / NE / BN -> sửa trực tiếp.
+  [ ] 8. (Tùy chọn) Tạo tài khoản Sentry miễn phí (sentry.io, gói Developer) -> gửi DSN
+         cho AI để gắn theo dõi lỗi. Không cần domain.
+  [ ] 9. Đẩy code lên GitHub (đã có remote origin). Đã kiểm tra: backend/.env (mật khẩu
+         Gmail, Google secret) KHÔNG nằm trong git -> an toàn. Không bao giờ git add -f .env.
+
+I. VIỆC CÓ PHÍ (làm sau) - giá tham khảo, kiểm tra lại giá khi mua
+  Thứ tự nên làm: 1 -> 2 -> 3 (các việc sau đều cần domain + server).
+  1. Tên miền (domain): ~1,500-2,500円/năm (.com), ~3,000-4,000円/năm (.jp), giá gia hạn
+     thường cao hơn năm đầu. Mua ở Cloudflare Registrar / お名前.com / ムームードメイン.
+     Có domain thì dùng được MIỄN PHÍ: Cloudflare (DNS, chống DDoS, HTTPS), link tunnel
+     cố định (hết phải sửa redirect URI Google), Cloudflare Turnstile (CAPTCHA).
+  2. Máy chủ (VPS / cloud) để chạy thật 24/7: ~1,000-3,000円/tháng (VPS 2GB RAM là đủ lúc
+     đầu: ConoHa, Xserver VPS, AWS Lightsail...). Trên đó cài MIỄN PHÍ: Docker, Nginx,
+     PostgreSQL, Redis, ClamAV (quét virus CV), Let's Encrypt (HTTPS), cron dọn dẹp.
+     -> Khi có server: nhờ AI viết docker-compose + cấu hình Nginx.
+  3. Lưu file CV thật (thay moto): AWS S3 Tokyo khoảng vài chục - vài trăm 円/tháng với
+     lượng nhỏ, hoặc MinIO tự chạy trên VPS (miễn phí, tốn ổ cứng).
+  4. Gửi email bằng domain riêng (không vào spam): cần domain (mục 1).
+     - Resend: miễn phí 3,000 email/tháng (tối đa 100/ngày), gói trả phí từ ~20 USD/tháng.
+     - Amazon SES Tokyo: ~0.10 USD / 1,000 email (khách mới không còn free tier, có thể
+       có credit khi tạo tài khoản AWS mới).
+     -> Cấu hình SPF / DKIM / DMARC trong DNS của domain (miễn phí).
+  5. Đăng nhập bằng Apple: Apple Developer Program 99 USD/năm (~15,000円) + cần domain HTTPS.
+  6. Luật sư / 社労士 kiểm tra chính sách bảo mật, điều khoản, nội dung trang 企業の方へ
+     (phí dịch vụ tùy văn phòng). Quan trọng trước khi chạy thật.
+  7. (Nếu cần) Thuê dịch giả bản ngữ cho my / ne / bn nếu không nhờ được người quen.
+  Việc KHÔNG tốn thêm tiền nhưng phải có domain/server trước: Turnstile CAPTCHA, Nginx
+  (header CSP/HSTS, client_max_body_size 6m), cookie __Host-, Redis cho rate limit khi
+  chạy nhiều worker, ClamAV, giám sát (Sentry free).
+
+
+======================================================================
+PHẦN 2. THÔNG SỐ ĐANG CÀI ĐẶT
+======================================================================
+
+A. Giới hạn số lần (rate limit) - tính theo IP, trừ khi ghi khác
+  - Đăng nhập:              20 lần / 15 phút / IP
+                            5 lần / 15 phút / email (sai lần 6 -> báo 429)
+  - Đăng ký:                10 lần / 1 giờ
+  - Làm mới phiên (refresh): 60 lần / 1 phút
+  - Upload CV:              20 lần / 1 giờ
+  - Nộp đơn ứng tuyển:      30 lần / 1 giờ
+  - Quên mật khẩu:          10 lần / 1 giờ / IP và 3 lần / 1 giờ / email
+  - Đặt lại mật khẩu:       20 lần / 1 giờ / IP
+  - Mở link xác nhận email: 30 lần / 1 giờ / IP
+  - Gửi lại email xác minh: 3 lần / 1 giờ / tài khoản
+  - Yêu cầu đổi email:      5 lần / 1 giờ / tài khoản
+  - Nhập lại MK hiện tại (đổi MK/email, xóa TK): 10 lần / 15 phút / tài khoản
+  - Form liên hệ doanh nghiệp, form /contact: mỗi form 5 lần / 1 giờ / IP;
+    chung 3 lần / 24 giờ / email
+  - Bị chặn thì trả mã 429 kèm header Retry-After (số giây phải chờ).
+
+B. Thời hạn phiên / token / cookie
+  - Access token (JWT):     15 phút (cookie access_token, HttpOnly)
+  - Refresh token:          14 ngày (cookie refresh_token, HttpOnly,
+                            chỉ gửi tới /api/v1/auth). Xoay vòng mỗi lần
+                            dùng; dùng lại token cũ -> thu hồi cả phiên.
+  - CSRF token:             14 ngày (cookie csrf_token, JS đọc được)
+  - Cookie ngôn ngữ:        1 năm (NEXT_LOCALE)
+  - State đăng nhập OAuth:  10 phút (cookie oauth_state)
+  - Link tải CV (presigned): 15 phút
+  - Link xác minh email:    24 giờ, dùng 1 lần
+  - Link đặt lại mật khẩu:  30 phút, dùng 1 lần
+  - Link xác nhận email mới: 24 giờ, dùng 1 lần
+    (gửi link mới thì link cũ cùng loại hết hiệu lực)
+  - Đổi/đặt lại mật khẩu: mọi access token cũ bị vô hiệu NGAY (token_version)
+  - Sai lệch giờ cho phép khi kiểm id_token OAuth: 60 giây
+  - Cấu hình đổi được bằng biến môi trường:
+      ACCESS_TTL_SECONDS (mặc định 900), REFRESH_TTL_SECONDS (1209600)
+
+C. Mật khẩu & dữ liệu nhập
+  - Mật khẩu: 10 - 128 ký tự, không được trùng email. Băm bằng Argon2id.
+  - Họ, tên: tối đa 100 ký tự. Email: tối đa 320 ký tự.
+  - Số điện thoại: 8 - 20 ký tự, chỉ số, dấu "-" và "+" ở đầu.
+  - Số năm kinh nghiệm: 0 - 60.
+  - Tóm tắt kinh nghiệm: tối đa 5000 ký tự.
+  - Lời nhắn khi ứng tuyển: tối đa 3000 ký tự.
+  - Từ khóa tìm kiếm: tối đa 100 ký tự.
+
+D. CV (file đính kèm)
+  - Định dạng: PDF, DOCX (không nhận .doc, .docm, .exe...).
+  - Dung lượng tối đa: 5MB (request lớn hơn 5MB + 64KB bị chặn ngay).
+  - Tối đa 5 CV mỗi ứng viên. CV đầu tiên tự thành CV chính.
+  - DOCX: tối đa 1000 file bên trong, giải nén tối đa 50MB,
+    tỉ lệ nén tối đa 200 lần (chống zip bomb).
+  - Bị chặn: file sai magic bytes, macro, PDF có JavaScript/Launch/
+    EmbeddedFile, đường dẫn "../" trong file nén.
+  - Lưu trên S3 bucket riêng tư, mã hóa AES256, key dạng
+    resumes/<user_id>/<uuid>.<pdf|docx>.
+
+E. Tìm kiếm & bộ nhớ đệm (cache)
+  - Danh sách job: mặc định 20, tối đa 50 kết quả.
+  - Mã tỉnh hợp lệ: 1 - 47.
+  - Số job theo tỉnh (bản đồ): cache 60 giây.
+  - Danh sách loại visa: cache 1 giờ.
+  - Trang chủ: tự làm mới tối đa 60 giây/lần.
+  - Tin tức (お知らせ): cache 60 giây; admin lưu bài thì cập nhật ngay.
+    10 tin/trang (API tối đa 50). Tin hẹn giờ chỉ hiện khi tới giờ đăng.
+
+F. Môi trường chạy thử (local)
+  - Frontend:  http://localhost:3111   (thử: /ja/signup, /ja/mypage)
+  - API:       http://localhost:8000   (tài liệu API: /api/docs, chỉ dev)
+  - S3 giả lập (moto): http://localhost:9000, bucket haken-resumes
+  - PostgreSQL tạm: localhost:55432, user postgres, không mật khẩu,
+    database recruit
+  - Test backend:
+      cd backend
+      DATABASE_URL="postgresql+psycopg://postgres@localhost:55432/recruit" \
+        .venv/Scripts/python.exe -m pytest -q tests
+    Kết quả hiện tại: 135/135 test đạt (DATABASE_URL đọc từ backend/.env).
+    Test luôn dùng MAIL_BACKEND=memory (không gửi email thật dù .env là smtp).
+  - Dữ liệu mẫu: 47 tỉnh, 8 vùng, 9 loại visa, 15 job mẫu, 4 tin tức mẫu
+    (mã HK-2026-000001 ... HK-2026-000015).
+    Tài khoản recruiter mẫu: seed-recruiter@example.com (không có mật
+    khẩu, không đăng nhập được).

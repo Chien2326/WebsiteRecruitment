@@ -1,0 +1,906 @@
+{
+  "common": {
+    "siteName": "Haken Work",
+    "loading": "Loading…"
+  },
+  "meta": {
+    "title": "Haken Work | Find jobs in Japan",
+    "description": "Dispatch (Haken) and part-time jobs in Japan for international workers."
+  },
+  "nav": {
+    "home": "Home",
+    "jobs": "Find jobs",
+    "news": "News",
+    "forEmployers": "For employers",
+    "login": "Log in",
+    "signup": "Sign up",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "main": "Main menu"
+  },
+  "footer": {
+    "tagline": "Supporting international workers in Japan, all the way.",
+    "jobSeekers": "For job seekers",
+    "company": "Company",
+    "support": "Support",
+    "searchJobs": "Search jobs",
+    "byPrefecture": "Browse by prefecture",
+    "visaInfo": "Visa information",
+    "about": "About us",
+    "news": "News",
+    "forEmployers": "Post a job",
+    "faq": "FAQ",
+    "contact": "Contact us",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "copyright": "© {year} Haken Work. All rights reserved."
+  },
+  "jobDetail": {
+    "jobCode": "Job code",
+    "postedOn": "Posted on",
+    "backToList": "Back to jobs",
+    "salary": "Salary",
+    "location": "Location",
+    "shift": "Work hours / shift",
+    "hoursPerWeek": "{hours} hrs/week",
+    "japaneseLevel": "Japanese level",
+    "visa": "Accepted visas",
+    "features": "Highlights",
+    "description": "Job description",
+    "client": "Client company",
+    "clientHidden": "The client company name is undisclosed (shared at application/interview).",
+    "transportIncluded": "Commuting allowance",
+    "apply": "Apply for this job",
+    "save": "Save",
+    "share": "Share",
+    "salaryHourly": "¥{min}–¥{max} per hour",
+    "salaryHourlyFrom": "From ¥{min} per hour",
+    "salaryMonthly": "¥{min}–¥{max} per month",
+    "salaryMonthlyFrom": "From ¥{min} per month",
+    "level": {
+      "none": "Not required",
+      "n5": "N5",
+      "n4": "N4",
+      "n3": "N3",
+      "n2": "N2",
+      "n1": "N1"
+    },
+    "feature": {
+      "dormitory": "Housing provided",
+      "no_experience": "No experience needed",
+      "transport_paid": "Commute paid",
+      "english_ok": "English OK"
+    },
+    "employment": {
+      "haken": "Dispatch (Haken)",
+      "part_time": "Part-time",
+      "full_time": "Full-time",
+      "contract": "Contract"
+    },
+    "saved": "Saved",
+    "saveLogin": "Log in to save jobs",
+    "newBadge": "NEW",
+    "monthlyEstimate": "Approx. ¥{amount}/month",
+    "monthlyEstimateShort": "≈ ¥{amount}/month",
+    "monthlyEstimateNote": "Estimate for {hours} hours a week, before tax (no overtime or allowances).",
+    "nearestStation": "Nearest station",
+    "deadline": "Application deadline",
+    "deadlineNote": "You can no longer apply after this date.",
+    "shareTitle": "Share this job",
+    "shareMore": "More",
+    "copyLink": "Copy link",
+    "copied": "Copied",
+    "similarTitle": "Jobs nearby"
+  },
+  "map": {
+    "title": "Find jobs on the map",
+    "subtitle": "Tap a region, then choose a prefecture",
+    "allJapan": "All Japan",
+    "backToJapan": "All Japan",
+    "jobs": "{count, plural, one {# job} other {# jobs}}",
+    "regionAll": "All of {region}",
+    "mapLabel": "Map of Japan",
+    "prefecturesIn": "Prefectures in {region}"
+  },
+  "search": {
+    "keywordLabel": "Keyword",
+    "keywordPlaceholder": "Job type (e.g. warehouse, hotel)",
+    "prefectureLabel": "Location",
+    "anyPrefecture": "All prefectures",
+    "submit": "Search"
+  },
+  "jobsPage": {
+    "title": "Jobs",
+    "resultCount": "{count, plural, one {# job found} other {# jobs found}}",
+    "noResults": "No jobs match your search.",
+    "clearFilters": "Clear filters",
+    "showing": "(showing {from}–{to})",
+    "pagination": "Pagination",
+    "prev": "Previous page",
+    "next": "Next page",
+    "filters": {
+      "title": "Filter jobs",
+      "any": "Any",
+      "level": "Japanese level",
+      "levelHint": "Shows jobs you can apply for with your level",
+      "visa": "Residence status",
+      "minHourly": "Hourly wage",
+      "hourlyOption": "¥{amount} or more",
+      "employment": "Employment type",
+      "features": "Preferences",
+      "sort": "Sort by",
+      "sortNew": "Newest",
+      "sortSalary": "Highest pay",
+      "apply": "Search",
+      "reset": "Reset filters"
+    },
+    "recentTitle": "Recently viewed jobs",
+    "recentClear": "Clear history"
+  },
+  "regions": {
+    "hokkaido": "Hokkaido",
+    "tohoku": "Tohoku",
+    "kanto": "Kanto",
+    "chubu": "Chubu",
+    "kansai": "Kansai",
+    "chugoku": "Chugoku",
+    "shikoku": "Shikoku",
+    "kyushu": "Kyushu & Okinawa"
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "signupTitle": "Create a free account",
+    "loginLead": "Welcome back!",
+    "signupLead": "Sign up in a minute and find the job that fits you.",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least 10 characters",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "lastName": "Last name",
+    "firstName": "First name",
+    "submitLogin": "Log in",
+    "submitSignup": "Sign up",
+    "or": "or",
+    "google": "Continue with Google",
+    "apple": "Continue with Apple",
+    "noAccount": "Don't have an account?",
+    "toSignup": "Sign up free",
+    "haveAccount": "Already have an account?",
+    "toLogin": "Log in",
+    "agree": "By signing up you agree to our Terms of Use and Privacy Policy.",
+    "myPage": "My page",
+    "logout": "Log out",
+    "forgotPassword": "Forgot your password?"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again in a moment.",
+    "network": "Network error. Please check your connection.",
+    "validation": "Please check what you entered.",
+    "invalid_credentials": "Incorrect email or password.",
+    "email_taken": "This email is already registered.",
+    "too_many_requests": "Too many attempts. Please wait a little and try again.",
+    "csrf_failed": "Your session expired. Please reload the page.",
+    "session_expired": "Your login expired. Please log in again.",
+    "not_authenticated": "Please log in.",
+    "oauth_unavailable": "This sign-in method is not available right now.",
+    "oauth_failed": "Sign-in with the external service failed.",
+    "oauth_cancelled": "Sign-in was cancelled.",
+    "oauth_no_email": "We couldn't get your email address.",
+    "email_exists": "This email is already registered. Please log in with your email and password.",
+    "account_disabled": "This account is not available.",
+    "empty_file": "The file is empty.",
+    "file_too_large": "Files must be 5 MB or smaller.",
+    "unsupported_type": "Please choose a PDF or Word (.docx) file.",
+    "content_mismatch": "The file contents don't match its type.",
+    "corrupt_file": "The file seems to be damaged.",
+    "unsafe_content": "This file contains unsafe content and can't be uploaded.",
+    "too_many_resumes": "You can keep up to 5 CVs. Please delete one first.",
+    "profile_required": "Please set up your profile first.",
+    "profile_incomplete": "Please enter your name in your profile before applying.",
+    "already_applied": "You have already applied for this job.",
+    "job_not_found": "This job is no longer available.",
+    "resume_not_found": "CV not found.",
+    "invalid_visa_type": "Please choose your visa status again.",
+    "forbidden": "You are not allowed to do this.",
+    "display_name_reveals_client": "The public display name contains the real company name.",
+    "approval_required": "Publishing needs approval.",
+    "invalid_transition": "This status change is not allowed.",
+    "review_note_required": "Please give a reason for sending it back.",
+    "invalid_prefecture": "Invalid prefecture.",
+    "cannot_modify_self": "You cannot change your own account here.",
+    "inline_not_allowed": "This file cannot be previewed.",
+    "application_not_found": "Application not found.",
+    "user_not_found": "User not found.",
+    "not_found": "Not found.",
+    "invalid_token": "This link is invalid or has expired.",
+    "password_equals_email": "Your password cannot be your email address.",
+    "already_verified": "Your email address is already confirmed.",
+    "wrong_password": "The current password is incorrect.",
+    "same_email": "That is already your email address.",
+    "not_linked": "This account is not linked.",
+    "last_login_method": "You would have no way to sign in. Set a password first.",
+    "staff_cannot_self_delete": "Staff accounts are removed by an administrator.",
+    "confirm_email_mismatch": "The email address does not match.",
+    "oauth_already_linked": "That account is already linked to another member.",
+    "provider_already_linked": "Another account of this type is already linked. Unlink it first.",
+    "slug_taken": "This URL (slug) is already used.",
+    "news_not_found": "News post not found.",
+    "too_many_saved_jobs": "You can save up to 200 jobs. Please remove some first."
+  },
+  "mypage": {
+    "title": "My page",
+    "hello": "Hello, {name}!",
+    "helloAnon": "Welcome!",
+    "applications": "Your applications",
+    "total": "Applied",
+    "inProgress": "In review",
+    "interview": "Interview",
+    "accepted": "Hired",
+    "empty": "You haven't applied for any jobs yet.",
+    "emptyCta": "Find jobs",
+    "appliedOn": "Applied {date}",
+    "updatedOn": "Updated {date}",
+    "profileCardTitle": "Profile & CV",
+    "profileCardText": "A complete profile helps recruiters see what you can do.",
+    "savedCardTitle": "Saved jobs",
+    "savedCardText": "Look again at the jobs you liked.",
+    "savedTitle": "Saved jobs",
+    "savedEmpty": "No saved jobs yet. Tap the ♡ on a job to save it.",
+    "backToMypage": "Back to my page",
+    "recommendedTitle": "Recommended for you",
+    "recommendedMore": "See more jobs",
+    "recommendedText": "Jobs that fit your Japanese level, visa status and preferred areas.",
+    "recommendedHint": "Fill in your profile (Japanese level, visa status, preferred areas) to get better matches.",
+    "recommendedHintLink": "Complete your profile",
+    "recommendedEmpty": "No matching jobs right now. Try adding more preferred areas."
+  },
+  "status": {
+    "applied": "Applied",
+    "reviewing": "In review",
+    "interview": "Interview invite",
+    "accepted": "Hired",
+    "rejected": "Not selected",
+    "rejectedNote": "Not this time. Let's look for other jobs!"
+  },
+  "profile": {
+    "title": "Profile",
+    "completion": "{percent}% complete",
+    "basic": "Basic information",
+    "residence": "Residence status",
+    "language": "Japanese & experience",
+    "location": "Where you live",
+    "lastName": "Last name",
+    "firstName": "First name",
+    "lastNameKana": "Last name (katakana)",
+    "firstNameKana": "First name (katakana)",
+    "birthDate": "Date of birth",
+    "nationality": "Nationality",
+    "phone": "Phone number",
+    "phoneHint": "e.g. 090-1234-5678",
+    "visa": "Visa status",
+    "visaExpiry": "Visa expiry date",
+    "japaneseLevel": "Japanese level",
+    "years": "Years of experience",
+    "summary": "Work history & skills",
+    "summaryPlaceholder": "Tell us about your past jobs and what you can do",
+    "currentPrefecture": "Prefecture you live in",
+    "select": "Please select",
+    "save": "Save",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "resumes": "CV / résumé",
+    "resumesHint": "PDF or Word (.docx) · up to 5 MB · max 5 files",
+    "dropHere": "or drop a file here",
+    "chooseFile": "Choose a file",
+    "uploading": "Uploading… {percent}%",
+    "uploaded": "Uploaded",
+    "default": "Main",
+    "setDefault": "Make main",
+    "view": "Download",
+    "delete": "Delete",
+    "confirmDelete": "Delete this CV?",
+    "noResumes": "No CV yet.",
+    "backToMypage": "Back to my page",
+    "desiredPrefectures": "Where do you want to work? (choose any)",
+    "desiredHint": "{count, plural, =0 {If you choose none, we search all of Japan.} one {# selected} other {# selected}}"
+  },
+  "apply": {
+    "cta": "Quick apply",
+    "loginToApply": "Log in to apply",
+    "title": "Apply for this job",
+    "chooseResume": "CV to send",
+    "noResume": "Apply without a CV",
+    "uploadNew": "Upload a new CV",
+    "message": "Message (optional)",
+    "messagePlaceholder": "Introduce yourself, how many days you can work, etc.",
+    "submit": "Apply",
+    "submitting": "Sending…",
+    "close": "Close",
+    "applied": "Applied (see my page)",
+    "success": "Application sent!",
+    "successText": "You can follow the status on your page.",
+    "toMypage": "Go to my page",
+    "toProfile": "Complete profile",
+    "staffNote": "Log in with a job-seeker account to apply."
+  },
+  "admin": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "jobs": "Jobs",
+      "applications": "Applicants & CVs",
+      "places": "Places",
+      "content": "Content & translations",
+      "users": "Users & roles",
+      "backToSite": "View site",
+      "logout": "Log out",
+      "news": "News",
+      "inquiries": "Employer inquiries",
+      "analytics": "Analytics"
+    },
+    "roles": {
+      "super_admin": "Super admin",
+      "recruiter_manager": "Recruiter manager",
+      "recruiter": "Recruiter (own jobs)",
+      "content_editor": "Content editor",
+      "candidate": "Candidate"
+    },
+    "common": {
+      "forbidden": "You don't have permission to view this page.",
+      "total": "{total} total",
+      "prev": "Previous",
+      "next": "Next",
+      "pageOf": "{page} / {pages}",
+      "all": "All",
+      "noData": "No data",
+      "save": "Save",
+      "saved": "Saved",
+      "cancel": "Cancel",
+      "close": "Close",
+      "search": "Search",
+      "filter": "Filter",
+      "confirmDelete": "Delete this item?",
+      "delete": "Delete",
+      "selectHint": "Select an item on the left to see its details here."
+    },
+    "jobStatus": {
+      "draft": "Draft",
+      "pending": "Pending review",
+      "published": "Published",
+      "archived": "Hidden"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Signed in as {email}",
+      "pendingJobs": "Jobs awaiting review",
+      "publishedJobs": "Published jobs",
+      "draftJobs": "Drafts",
+      "newApplications": "New applications",
+      "applications7d": "Applications (7 days)",
+      "quickLinks": "Quick links",
+      "newInquiries": "New employer inquiries"
+    },
+    "jobs": {
+      "title": "Jobs",
+      "new": "New job",
+      "keyword": "Search by code or title",
+      "filterStatus": "Status",
+      "filterPrefecture": "Prefecture",
+      "from": "Created from",
+      "to": "Created to",
+      "code": "Code",
+      "jobTitle": "Title",
+      "status": "Status",
+      "prefecture": "Location",
+      "salary": "Salary",
+      "applications": "Applicants",
+      "created": "Created",
+      "views": "Views"
+    },
+    "editor": {
+      "hourly": "Hourly",
+      "monthly": "Monthly",
+      "rejectPrompt": "Why are you sending this back? (shown to the author)",
+      "submit": "Submit for review",
+      "publish": "Approve & publish",
+      "reject": "Send back",
+      "withdraw": "Withdraw",
+      "hide": "Hide",
+      "reopen": "Republish",
+      "toDraft": "Back to draft",
+      "back": "All jobs",
+      "titleNew": "New job",
+      "reviewNote": "Reviewer feedback",
+      "sectionContent": "Job content",
+      "title": "Title",
+      "description": "Description",
+      "sectionCompany": "Client company",
+      "endClientHint": "Internal only: never shown to job seekers",
+      "endClient": "Real client company",
+      "endClientAddress": "Client address",
+      "internalNote": "Internal note",
+      "displayName": "Public display name",
+      "displayNameHint": "e.g. \"Major auto-parts maker\". Empty = shown as undisclosed.",
+      "displayLeak": "The public display name contains the real company name.",
+      "sectionConditions": "Conditions",
+      "employmentType": "Employment type",
+      "salaryType": "Pay type",
+      "salaryMin": "Pay from (JPY)",
+      "salaryMax": "Pay to (JPY)",
+      "prefecture": "Prefecture",
+      "level": "Japanese level",
+      "hoursPerWeek": "Hours / week",
+      "expires": "Listing ends",
+      "transport": "Commute allowance",
+      "visas": "Accepted visas",
+      "features": "Highlights",
+      "shift": "Hours / shift",
+      "city": "City",
+      "station": "Nearest station"
+    },
+    "apps": {
+      "title": "Applicants & CVs",
+      "searchHint": "Name, email or job code",
+      "changeStatus": "Change status",
+      "recruiterNote": "Internal note (not shown to the candidate)",
+      "notify": "Email the candidate about this change",
+      "profile": "Profile",
+      "nationality": "Nationality",
+      "level": "Japanese",
+      "visa": "Visa",
+      "phone": "Phone",
+      "location": "Lives in",
+      "experience": "Years of experience",
+      "coverMessage": "Message",
+      "resume": "CV",
+      "download": "Download",
+      "noResume": "Applied without a CV.",
+      "docxNote": "Word files: please download to view.",
+      "emails": "Emails sent",
+      "previewError": "Could not display the CV. Please download it instead.",
+      "pdfPages": "Showing {shown} of {total} pages",
+      "history": "Status history",
+      "deletedUser": "(unknown)",
+      "resumeAccess": "CV access log",
+      "viewed": "viewed",
+      "downloaded": "downloaded",
+      "levelNone": "No Japanese",
+      "years": "{n} yrs",
+      "emailStatus": {
+        "queued": "Queued",
+        "sent": "Sent",
+        "failed": "Failed"
+      }
+    },
+    "places": {
+      "title": "Places",
+      "hint": "Show/hide areas on the map and search, and set their names in each language.",
+      "visible": "Visible",
+      "hidden": "Hidden",
+      "editNames": "Edit names"
+    },
+    "content": {
+      "title": "Content & translations",
+      "translations": "UI text (translations)",
+      "cms": "Notices & static content",
+      "targetLocale": "Language",
+      "namespace": "Screen",
+      "filterAll": "All",
+      "filterMissing": "Untranslated only",
+      "filterOverridden": "Overridden only",
+      "override": "Override",
+      "revert": "Revert",
+      "placeholderError": "Keep the variables {expected} exactly as they are.",
+      "syntaxError": "Invalid format (check the { } braces).",
+      "cmsNew": "New block",
+      "cmsHint": "\"home.notice\" is shown as the notice on the home page.",
+      "published": "Published",
+      "unpublished": "Unpublished",
+      "cmsKey": "Key",
+      "keyHint": "Lowercase letters, digits, . _ - (e.g. home.notice)",
+      "cmsContent": "Text"
+    },
+    "users": {
+      "title": "Users & roles",
+      "hint": "Changes apply immediately; the user has to log in again.",
+      "role": "Role",
+      "email": "Email",
+      "name": "Name",
+      "active": "Active",
+      "lastLogin": "Last login",
+      "self": "you",
+      "roleChanged": "Updated {email}"
+    },
+    "news": {
+      "title": "News",
+      "new": "New post",
+      "edit": "Edit post",
+      "preview": "Preview",
+      "view": "View on site",
+      "scheduled": "Scheduled",
+      "status": {
+        "draft": "Draft",
+        "published": "Published",
+        "archived": "Archived"
+      },
+      "fieldTitle": "Title",
+      "fieldSummary": "Summary",
+      "summaryHint": "Short text shown in the list.",
+      "fieldBody": "Body",
+      "formatHint": "Blank line = new paragraph. \"## \" heading, \"- \" bullet, **bold**, [link text](/jobs).",
+      "fieldSlug": "URL (slug)",
+      "slugHint": "Lowercase letters, digits and hyphens only. e.g. winter-jobs-2026",
+      "fieldStatus": "Status",
+      "fieldPublishedAt": "Publish date",
+      "publishedAtHint": "Leave empty to publish now. A future date publishes the post automatically at that time.",
+      "searchPlaceholder": "Search title or slug"
+    },
+    "inquiries": {
+      "title": "Employer inquiries",
+      "searchHint": "Company, contact, email",
+      "status": {
+        "new": "New",
+        "contacted": "In progress",
+        "closed": "Closed"
+      },
+      "people": "{n} people",
+      "contact": "Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "prefecture": "Location",
+      "headcount": "Headcount",
+      "language": "Language",
+      "received": "Received",
+      "message": "Message",
+      "statusLabel": "Status",
+      "note": "Internal note",
+      "noteHint": "Never shown to the customer.",
+      "confirmDelete": "Delete this inquiry? The personal data is deleted too and cannot be restored.",
+      "kindLabel": "Type",
+      "kind": {
+        "employer": "Employer",
+        "general": "General"
+      }
+    },
+    "analytics": {
+      "title": "Views & applications",
+      "range": "Range",
+      "weeks": "{n} weeks",
+      "showTable": "Show table",
+      "showChart": "Show charts",
+      "note": "Weeks start on Monday (Japan time). Views = job detail page views (the same visitor within 30 min counts once). Views are counted from 13 Nov 2026, so the apply rate shows \"–\" where earlier applications have no views.",
+      "views30": "Views (30 days)",
+      "apps30": "Applications (30 days)",
+      "conversion": "Apply rate (30 days)",
+      "liveJobs": "Live jobs",
+      "signups30": "Sign-ups (30 days)",
+      "weeklyTable": "Weekly numbers",
+      "weekOf": "Week of",
+      "applications": "Applications",
+      "views": "Views",
+      "signups": "Sign-ups",
+      "appsWeekly": "Applications per week",
+      "viewsWeekly": "Job views per week",
+      "signupsWeekly": "New candidate sign-ups per week",
+      "byStatus": "Applications by status",
+      "topJobs": "Most viewed jobs (30 days)",
+      "job": "Job",
+      "viewsTotal": "Total views",
+      "byPrefecture": "Applications by prefecture (90 days)",
+      "empty": "No data yet.",
+      "error": "Could not load analytics."
+    }
+  },
+  "account": {
+    "title": "Account settings",
+    "settingsCardTitle": "Account settings",
+    "settingsCardText": "Email, password, linked accounts, delete account",
+    "forgotTitle": "Reset your password",
+    "forgotLead": "Enter the email address you registered with. We will send you a reset link.",
+    "forgotSubmit": "Send reset link",
+    "forgotSent": "If that address is registered, we have sent a reset link. Please check your inbox (valid for 30 minutes).",
+    "backToLogin": "Back to log in",
+    "resetTitle": "Set a new password",
+    "resetLead": "Enter your new password.",
+    "newPassword": "New password",
+    "confirmPassword": "New password (again)",
+    "currentPassword": "Current password",
+    "passwordMismatch": "The passwords do not match.",
+    "resetSubmit": "Change password",
+    "resetDone": "Your password has been changed. Please log in with the new password.",
+    "invalidLink": "This link is invalid or has expired.",
+    "requestNewLink": "Send a new link",
+    "verifyTitle": "Email confirmation",
+    "verifying": "Confirming…",
+    "verifiedDone": "Your email address is confirmed.",
+    "emailChangedDone": "Your email address is now {email}.",
+    "toMypage": "Go to My page",
+    "bannerUnverified": "Your email address is not confirmed yet. Please open the link in the email we sent you.",
+    "resend": "Resend email",
+    "resent": "We sent you a confirmation email. Please check your inbox.",
+    "emailSection": "Email address",
+    "currentEmail": "Current:",
+    "verified": "Confirmed",
+    "unverified": "Not confirmed",
+    "newEmail": "New email address",
+    "changeEmailSubmit": "Send confirmation email",
+    "changeEmailSent": "We sent a confirmation email to {email}. Open the link to complete the change.",
+    "passwordSection": "Change password",
+    "setPasswordSection": "Set a password",
+    "setPasswordLead": "You sign in with Google or Apple. Set a password to also sign in with your email address.",
+    "changePasswordSubmit": "Save password",
+    "passwordChanged": "Password saved. You were signed out on your other devices.",
+    "linkedSection": "Linked accounts",
+    "linkedLead": "Link Google or Apple to sign in with one tap.",
+    "link": "Link",
+    "unlink": "Unlink",
+    "linkedDone": "Your {provider} account is now linked.",
+    "unlinkedDone": "Your {provider} account was unlinked.",
+    "deleteSection": "Delete account",
+    "deleteLead": "Your profile, CVs and applications will all be deleted. This cannot be undone.",
+    "deleteConfirmEmail": "To confirm, type your email address",
+    "deleteAgree": "I understand, delete my account",
+    "deleteSubmit": "Delete my account",
+    "deletedDone": "Your account has been deleted. Thank you for using Haken Work."
+  },
+  "newsPage": {
+    "title": "News",
+    "lead": "The latest updates from Haken Work.",
+    "empty": "No news yet.",
+    "loadError": "Could not load the news. Please try again later.",
+    "backToList": "Back to news",
+    "notTranslated": "This post is not yet available in your language.",
+    "pagination": "Pagination",
+    "prev": "Previous page",
+    "next": "Next page",
+    "seeAll": "See all"
+  },
+  "employersPage": {
+    "metaTitle": "For employers | Hire foreign staff",
+    "eyebrow": "Support for hiring foreign workers",
+    "heroTitle": "Short on staff? Hire motivated foreign workers with Haken Work.",
+    "heroLead": "Haken Work connects companies in Japan with foreigners who want to work here, through staffing and placement. We take care of everything from checking residence status to support after they start.",
+    "cta": "Free consultation",
+    "stats": {
+      "languages": {
+        "label": "Languages",
+        "value": "6"
+      },
+      "prefectures": {
+        "label": "Area",
+        "value": "All 47 prefectures"
+      },
+      "support": {
+        "label": "Reply",
+        "value": "Within 2 business days"
+      }
+    },
+    "benefitsTitle": "Why companies choose us",
+    "benefits": {
+      "speed": {
+        "title": "Fast placement",
+        "body": "We quickly introduce candidates who match your requirements, even for sudden staffing needs."
+      },
+      "languages": {
+        "title": "Support in 6 languages",
+        "body": "We explain the job to staff in Vietnamese, Burmese, Nepali, Bengali and English, which prevents mismatches and early resignations."
+      },
+      "visa": {
+        "title": "Residence status checked in advance",
+        "body": "We confirm that each person is allowed to work before introducing them, reducing the risk of illegal employment."
+      },
+      "support": {
+        "title": "Follow-up after hiring",
+        "body": "Our staff handle questions about attendance and daily life, so your on-site managers carry less of the load."
+      }
+    },
+    "industriesTitle": "Industries where our candidates work",
+    "industries": {
+      "factory": "Manufacturing",
+      "logistics": "Warehouse & logistics",
+      "food": "Food processing",
+      "hotel": "Hotels & ryokan",
+      "cleaning": "Cleaning",
+      "construction": "Construction",
+      "care": "Elderly care",
+      "retail": "Retail & restaurants"
+    },
+    "flowTitle": "How it works",
+    "steps": {
+      "contact": {
+        "title": "Contact us",
+        "body": "Send us a message with the form below."
+      },
+      "hearing": {
+        "title": "Consultation",
+        "body": "We ask about the work, headcount, timing and conditions."
+      },
+      "contract": {
+        "title": "Contract",
+        "body": "Once you accept the quote, we sign a contract."
+      },
+      "matching": {
+        "title": "Introduction",
+        "body": "We select matching candidates and arrange interviews and site visits."
+      },
+      "start": {
+        "title": "Start work",
+        "body": "We keep following up after they start."
+      }
+    },
+    "faqTitle": "Frequently asked questions",
+    "faq": {
+      "cost": {
+        "q": "How much does it cost?",
+        "a": "It depends on the type of contract (staffing or placement), the number of people and the working conditions. Contact us and we will send a quote. Consultation is free."
+      },
+      "visa": {
+        "q": "What residence statuses do your candidates have?",
+        "a": "We introduce people who are allowed to work, such as permanent residents, long-term residents, spouses of Japanese nationals and Specified Skilled Workers. Students can only work within their permission (generally up to 28 hours a week)."
+      },
+      "japanese": {
+        "q": "How well do they speak Japanese?",
+        "a": "Our candidates range from everyday conversation (around JLPT N4) to business level (N2 or above). Tell us the level the job needs."
+      },
+      "trouble": {
+        "q": "What if a problem happens after they start?",
+        "a": "Our staff talk with the worker in their native language and help solve the problem, so your site does not have to handle it alone."
+      },
+      "area": {
+        "q": "Can rural workplaces use the service?",
+        "a": "Yes, we accept requests from all 47 prefectures. Jobs that include housing tend to attract many applicants."
+      }
+    },
+    "formTitle": "Contact form",
+    "formLead": "Our staff will review your message and reply within 2 business days.",
+    "form": {
+      "required": "Required",
+      "optional": "Optional",
+      "company": "Company name",
+      "contact": "Contact person",
+      "email": "Email",
+      "phone": "Phone",
+      "prefecture": "Work location (prefecture)",
+      "prefectureAny": "Undecided / several",
+      "headcount": "Number of people",
+      "message": "Your message",
+      "messageHint": "Tell us about the work, timing, working hours, etc. (up to 2,000 characters).",
+      "agree": "I agree that the information I entered is used according to the <link>privacy policy</link>.",
+      "submit": "Send",
+      "doneTitle": "Thank you for your inquiry",
+      "doneBody": "We have sent a confirmation email to the address you entered. Our staff will contact you within 2 business days."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The URL may be wrong, or the page has been removed.",
+    "home": "Home",
+    "jobs": "Find jobs"
+  },
+  "pages": {
+    "notTranslated": "This page is not yet translated into your language, so it is shown in Japanese.",
+    "preparing": "This page is being prepared.",
+    "about": {
+      "title": "About us"
+    },
+    "privacy": {
+      "title": "Privacy policy"
+    },
+    "terms": {
+      "title": "Terms of use"
+    }
+  },
+  "faqPage": {
+    "title": "FAQ",
+    "lead": "Common questions about finding and applying for jobs.",
+    "groups": {
+      "start": "Getting started",
+      "apply": "Applying",
+      "work": "Work and residence status",
+      "account": "Your account"
+    },
+    "items": {
+      "free": {
+        "q": "Does it cost anything to register or apply?",
+        "a": "No. Registering and applying for jobs are free."
+      },
+      "noJapanese": {
+        "q": "Can I apply if I don't speak Japanese?",
+        "a": "Yes. Some jobs need no Japanese. Use the \"Japanese level\" filter on the job list to show only jobs that fit your level."
+      },
+      "abroad": {
+        "q": "Can I apply from outside Japan?",
+        "a": "At the moment the service is for people who live in Japan and have a residence status that allows them to work."
+      },
+      "how": {
+        "q": "How do I apply?",
+        "a": "Press \"Apply\" on the job page, log in (or sign up) and fill in your profile, then send your application."
+      },
+      "cv": {
+        "q": "Do I need a CV?",
+        "a": "You can apply without one, but a CV speeds things up. You can upload up to 5 PDF or Word files (5MB each)."
+      },
+      "status": {
+        "q": "Where can I see the result?",
+        "a": "Check your status on My page. We also email you when it changes."
+      },
+      "cancel": {
+        "q": "I want to cancel an application.",
+        "a": "Please contact us with the contact form."
+      },
+      "visa": {
+        "q": "Which residence statuses can work?",
+        "a": "Your residence status decides what work and how many hours you can do. See the \"Visa\" page."
+      },
+      "dormitory": {
+        "q": "Are there jobs with housing?",
+        "a": "Yes. Choose \"Housing provided\" under Preferences on the job list."
+      },
+      "pay": {
+        "q": "When and how am I paid?",
+        "a": "It depends on the job and contract. Always confirm at the interview and when you sign."
+      },
+      "password": {
+        "q": "I forgot my password.",
+        "a": "Use \"Forgot your password?\" on the login page to get a reset email."
+      },
+      "delete": {
+        "q": "I want to delete my account.",
+        "a": "Go to My page -> Account settings -> Delete account. Your data and CVs are deleted."
+      }
+    },
+    "more": "Can't find your question?",
+    "contactLink": "Use the contact form"
+  },
+  "visaPage": {
+    "title": "About visas (residence status)",
+    "lead": "Whether you can work in Japan, and what work you can do, depends on your residence status. Check what yours allows before applying.",
+    "groups": {
+      "free": {
+        "title": "Statuses with no limit on the kind of work",
+        "body": "Permanent residents, spouses of Japanese nationals or permanent residents, and long-term residents can do any kind of work for any hours, including dispatch and part-time jobs."
+      },
+      "limited": {
+        "title": "Statuses that allow only certain work",
+        "body": "Specified Skilled Worker, Engineer/Specialist in Humanities/International Services, Technical Intern Training and similar statuses allow only the permitted field and work. Before changing jobs, check that the new work is allowed. Technical interns generally cannot work anywhere other than their training site."
+      },
+      "permission": {
+        "title": "Statuses that allow limited hours with permission",
+        "body": "Students and dependents can work generally up to 28 hours a week once they get \"permission to engage in activity other than that permitted\" (students: up to 8 hours a day during long school holidays). Adult-entertainment related work is not allowed."
+      }
+    },
+    "checkTitle": "Things to check",
+    "check": {
+      "card": "Check \"work restrictions\" on the front of your residence card and the permission field on the back.",
+      "expiry": "Apply to renew before your period of stay ends (you can apply from about 3 months before).",
+      "change": "With a work-type status, you must notify the Immigration Services Agency within 14 days when your employer changes."
+    },
+    "disclaimer": "This page is general guidance. For your own case, ask the Immigration Services Agency or an expert.",
+    "isaLink": "Immigration Services Agency website"
+  },
+  "prefecturesPage": {
+    "title": "Jobs by prefecture",
+    "lead": "Choose where you want to work. Numbers show open jobs."
+  },
+  "contactPage": {
+    "title": "Contact us",
+    "lead": "Send us your questions or feedback here.",
+    "faqTitle": "FAQ",
+    "faqText": "You may find your answer here first.",
+    "employersTitle": "For employers",
+    "employersText": "Please use the employer form for staffing requests.",
+    "formTitle": "Contact form",
+    "formLead": "We will reply within 2 business days.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "messageHint": "Up to 2,000 characters",
+      "agree": "I agree to the <link>privacy policy</link>.",
+      "submit": "Send",
+      "doneTitle": "Thank you for your message",
+      "doneBody": "We have sent you a confirmation email and will contact you soon."
+    }
+  }
+}

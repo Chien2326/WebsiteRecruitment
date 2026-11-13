@@ -1,0 +1,906 @@
+{
+  "common": {
+    "siteName": "Haken Work",
+    "loading": "Đang tải…"
+  },
+  "meta": {
+    "title": "Haken Work | Tìm việc làm tại Nhật Bản",
+    "description": "Việc làm Haken (phái cử) và làm thêm tại Nhật Bản dành cho lao động nước ngoài."
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "jobs": "Tìm việc",
+    "news": "Tin tức",
+    "forEmployers": "Dành cho nhà tuyển dụng",
+    "login": "Đăng nhập",
+    "signup": "Đăng ký",
+    "language": "Ngôn ngữ",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu",
+    "main": "Menu chính"
+  },
+  "footer": {
+    "tagline": "Đồng hành cùng lao động nước ngoài tại Nhật Bản.",
+    "jobSeekers": "Dành cho người tìm việc",
+    "company": "Công ty",
+    "support": "Hỗ trợ",
+    "searchJobs": "Tìm việc làm",
+    "byPrefecture": "Tìm theo tỉnh thành",
+    "visaInfo": "Thông tin về visa",
+    "about": "Về chúng tôi",
+    "news": "Tin tức",
+    "forEmployers": "Đăng tin tuyển dụng",
+    "faq": "Câu hỏi thường gặp",
+    "contact": "Liên hệ",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng",
+    "copyright": "© {year} Haken Work. Bảo lưu mọi quyền."
+  },
+  "jobDetail": {
+    "jobCode": "Mã việc làm",
+    "postedOn": "Ngày đăng",
+    "backToList": "Quay lại danh sách",
+    "salary": "Mức lương",
+    "location": "Địa điểm làm việc",
+    "shift": "Giờ làm / ca làm",
+    "hoursPerWeek": "{hours} giờ/tuần",
+    "japaneseLevel": "Trình độ tiếng Nhật",
+    "visa": "Visa được chấp nhận",
+    "features": "Điểm nổi bật",
+    "description": "Mô tả công việc",
+    "client": "Công ty tiếp nhận",
+    "clientHidden": "Tên công ty tiếp nhận được ẩn (sẽ thông báo khi ứng tuyển/phỏng vấn).",
+    "transportIncluded": "Hỗ trợ đi lại",
+    "apply": "Ứng tuyển công việc này",
+    "save": "Lưu",
+    "share": "Chia sẻ",
+    "salaryHourly": "{min}–{max} yên/giờ",
+    "salaryHourlyFrom": "Từ {min} yên/giờ",
+    "salaryMonthly": "{min}–{max} yên/tháng",
+    "salaryMonthlyFrom": "Từ {min} yên/tháng",
+    "level": {
+      "none": "Không yêu cầu",
+      "n5": "N5",
+      "n4": "N4",
+      "n3": "N3",
+      "n2": "N2",
+      "n1": "N1"
+    },
+    "feature": {
+      "dormitory": "Có ký túc xá",
+      "no_experience": "Không cần kinh nghiệm",
+      "transport_paid": "Hỗ trợ đi lại",
+      "english_ok": "Dùng được tiếng Anh"
+    },
+    "employment": {
+      "haken": "Haken (phái cử)",
+      "part_time": "Làm thêm",
+      "full_time": "Toàn thời gian",
+      "contract": "Hợp đồng"
+    },
+    "saved": "Đã lưu",
+    "saveLogin": "Đăng nhập để lưu việc làm",
+    "newBadge": "MỚI",
+    "monthlyEstimate": "Thu nhập ước tính khoảng {amount} yên/tháng",
+    "monthlyEstimateShort": "≈ {amount} yên/tháng",
+    "monthlyEstimateNote": "Ước tính cho {hours} giờ/tuần, trước thuế (chưa gồm tăng ca, phụ cấp).",
+    "nearestStation": "Ga gần nhất",
+    "deadline": "Hạn nộp đơn",
+    "deadlineNote": "Sau ngày này sẽ không thể ứng tuyển.",
+    "shareTitle": "Chia sẻ việc làm này",
+    "shareMore": "Khác",
+    "copyLink": "Sao chép liên kết",
+    "copied": "Đã sao chép",
+    "similarTitle": "Việc làm ở khu vực gần"
+  },
+  "map": {
+    "title": "Tìm việc theo bản đồ",
+    "subtitle": "Chạm vào một vùng, sau đó chọn tỉnh",
+    "allJapan": "Toàn Nhật Bản",
+    "backToJapan": "Toàn Nhật Bản",
+    "jobs": "{count} việc",
+    "regionAll": "Toàn vùng {region}",
+    "mapLabel": "Bản đồ Nhật Bản",
+    "prefecturesIn": "Các tỉnh vùng {region}"
+  },
+  "search": {
+    "keywordLabel": "Từ khóa",
+    "keywordPlaceholder": "Loại công việc (vd: kho hàng, khách sạn)",
+    "prefectureLabel": "Địa điểm",
+    "anyPrefecture": "Tất cả tỉnh thành",
+    "submit": "Tìm kiếm"
+  },
+  "jobsPage": {
+    "title": "Danh sách việc làm",
+    "resultCount": "Tìm thấy {count} việc làm",
+    "noResults": "Không tìm thấy việc làm phù hợp.",
+    "clearFilters": "Xóa bộ lọc",
+    "showing": "(hiển thị {from}–{to})",
+    "pagination": "Phân trang",
+    "prev": "Trang trước",
+    "next": "Trang sau",
+    "filters": {
+      "title": "Lọc việc làm",
+      "any": "Tất cả",
+      "level": "Trình độ tiếng Nhật",
+      "levelHint": "Hiện các việc bạn có thể ứng tuyển với trình độ của mình",
+      "visa": "Tư cách lưu trú",
+      "minHourly": "Lương giờ",
+      "hourlyOption": "Từ {amount} yên",
+      "employment": "Hình thức",
+      "features": "Ưu tiên",
+      "sort": "Sắp xếp",
+      "sortNew": "Mới nhất",
+      "sortSalary": "Lương cao nhất",
+      "apply": "Tìm kiếm",
+      "reset": "Xóa bộ lọc"
+    },
+    "recentTitle": "Việc làm đã xem gần đây",
+    "recentClear": "Xóa lịch sử"
+  },
+  "regions": {
+    "hokkaido": "Hokkaido",
+    "tohoku": "Tohoku",
+    "kanto": "Kanto",
+    "chubu": "Chubu",
+    "kansai": "Kansai",
+    "chugoku": "Chugoku",
+    "shikoku": "Shikoku",
+    "kyushu": "Kyushu & Okinawa"
+  },
+  "auth": {
+    "loginTitle": "Đăng nhập",
+    "signupTitle": "Đăng ký miễn phí",
+    "loginLead": "Chào mừng bạn quay lại!",
+    "signupLead": "Đăng ký trong 1 phút và tìm công việc phù hợp với bạn.",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "passwordHint": "Ít nhất 10 ký tự",
+    "showPassword": "Hiện mật khẩu",
+    "hidePassword": "Ẩn mật khẩu",
+    "lastName": "Họ",
+    "firstName": "Tên",
+    "submitLogin": "Đăng nhập",
+    "submitSignup": "Đăng ký",
+    "or": "hoặc",
+    "google": "Tiếp tục với Google",
+    "apple": "Tiếp tục với Apple",
+    "noAccount": "Chưa có tài khoản?",
+    "toSignup": "Đăng ký miễn phí",
+    "haveAccount": "Đã có tài khoản?",
+    "toLogin": "Đăng nhập",
+    "agree": "Khi đăng ký, bạn đồng ý với Điều khoản sử dụng và Chính sách bảo mật.",
+    "myPage": "Trang của tôi",
+    "logout": "Đăng xuất",
+    "forgotPassword": "Quên mật khẩu?"
+  },
+  "errors": {
+    "generic": "Đã xảy ra lỗi. Vui lòng thử lại sau.",
+    "network": "Lỗi kết nối. Vui lòng kiểm tra mạng.",
+    "validation": "Vui lòng kiểm tra thông tin đã nhập.",
+    "invalid_credentials": "Email hoặc mật khẩu không đúng.",
+    "email_taken": "Email này đã được đăng ký.",
+    "too_many_requests": "Bạn thử quá nhiều lần. Vui lòng đợi một lát.",
+    "csrf_failed": "Phiên làm việc đã hết hạn. Vui lòng tải lại trang.",
+    "session_expired": "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.",
+    "not_authenticated": "Vui lòng đăng nhập.",
+    "oauth_unavailable": "Cách đăng nhập này hiện chưa dùng được.",
+    "oauth_failed": "Đăng nhập bằng dịch vụ bên ngoài thất bại.",
+    "oauth_cancelled": "Bạn đã hủy đăng nhập.",
+    "oauth_no_email": "Không lấy được địa chỉ email.",
+    "email_exists": "Email này đã được đăng ký. Vui lòng đăng nhập bằng email và mật khẩu.",
+    "account_disabled": "Tài khoản này không thể sử dụng.",
+    "empty_file": "Tệp trống.",
+    "file_too_large": "Tệp tối đa 5MB.",
+    "unsupported_type": "Vui lòng chọn tệp PDF hoặc Word (.docx).",
+    "content_mismatch": "Nội dung tệp không khớp với định dạng.",
+    "corrupt_file": "Tệp có thể bị hỏng.",
+    "unsafe_content": "Tệp chứa nội dung không an toàn nên không thể tải lên.",
+    "too_many_resumes": "Bạn chỉ lưu được tối đa 5 CV. Vui lòng xóa bớt.",
+    "profile_required": "Vui lòng tạo hồ sơ trước.",
+    "profile_incomplete": "Vui lòng nhập họ tên trong hồ sơ trước khi ứng tuyển.",
+    "already_applied": "Bạn đã ứng tuyển công việc này rồi.",
+    "job_not_found": "Tin tuyển dụng này đã kết thúc.",
+    "resume_not_found": "Không tìm thấy CV.",
+    "invalid_visa_type": "Vui lòng chọn lại loại visa.",
+    "forbidden": "Bạn không có quyền thực hiện thao tác này.",
+    "display_name_reveals_client": "Tên hiển thị công khai đang chứa tên công ty thực tế.",
+    "approval_required": "Cần được duyệt mới có thể đăng.",
+    "invalid_transition": "Không thể chuyển sang trạng thái này.",
+    "review_note_required": "Vui lòng nhập lý do trả lại.",
+    "invalid_prefecture": "Tỉnh thành không hợp lệ.",
+    "cannot_modify_self": "Bạn không thể tự thay đổi tài khoản của mình.",
+    "inline_not_allowed": "Không thể xem trước file này.",
+    "application_not_found": "Không tìm thấy đơn ứng tuyển.",
+    "user_not_found": "Không tìm thấy người dùng.",
+    "not_found": "Không tìm thấy.",
+    "invalid_token": "Liên kết không hợp lệ hoặc đã hết hạn.",
+    "password_equals_email": "Mật khẩu không được trùng với email.",
+    "already_verified": "Email của bạn đã được xác nhận.",
+    "wrong_password": "Mật khẩu hiện tại không đúng.",
+    "same_email": "Đây đã là email hiện tại của bạn.",
+    "not_linked": "Tài khoản này chưa được liên kết.",
+    "last_login_method": "Không thể hủy vì bạn sẽ không còn cách đăng nhập. Hãy tạo mật khẩu trước.",
+    "staff_cannot_self_delete": "Tài khoản nhân viên do quản trị viên xóa.",
+    "confirm_email_mismatch": "Địa chỉ email không khớp.",
+    "oauth_already_linked": "Tài khoản này đã được liên kết với thành viên khác.",
+    "provider_already_linked": "Bạn đã liên kết một tài khoản khác cùng loại. Hãy hủy liên kết trước.",
+    "slug_taken": "URL (slug) này đã được dùng.",
+    "news_not_found": "Không tìm thấy thông báo.",
+    "too_many_saved_jobs": "Chỉ lưu được tối đa 200 việc làm. Hãy xóa bớt."
+  },
+  "mypage": {
+    "title": "Trang của tôi",
+    "hello": "Xin chào, {name}!",
+    "helloAnon": "Chào mừng bạn!",
+    "applications": "Việc đã ứng tuyển",
+    "total": "Đã nộp",
+    "inProgress": "Đang xét",
+    "interview": "Phỏng vấn",
+    "accepted": "Trúng tuyển",
+    "empty": "Bạn chưa ứng tuyển công việc nào.",
+    "emptyCta": "Tìm việc ngay",
+    "appliedOn": "Ngày nộp: {date}",
+    "updatedOn": "Cập nhật: {date}",
+    "profileCardTitle": "Hồ sơ & CV",
+    "profileCardText": "Hồ sơ càng đầy đủ, nhà tuyển dụng càng dễ hiểu về bạn.",
+    "savedCardTitle": "Việc làm đã lưu",
+    "savedCardText": "Xem lại các việc làm bạn quan tâm.",
+    "savedTitle": "Việc làm đã lưu",
+    "savedEmpty": "Chưa có việc làm nào được lưu. Bấm ♡ trên việc làm để lưu.",
+    "backToMypage": "Về Trang của tôi",
+    "recommendedTitle": "Việc làm gợi ý cho bạn",
+    "recommendedMore": "Xem thêm việc làm",
+    "recommendedText": "Các việc phù hợp với trình độ tiếng Nhật, tư cách lưu trú và nơi bạn muốn làm.",
+    "recommendedHint": "Hãy điền hồ sơ (trình độ tiếng Nhật, tư cách lưu trú, nơi muốn làm) để nhận gợi ý phù hợp hơn.",
+    "recommendedHintLink": "Điền hồ sơ",
+    "recommendedEmpty": "Hiện chưa có việc phù hợp. Hãy thử chọn thêm nơi muốn làm."
+  },
+  "status": {
+    "applied": "Đã nộp",
+    "reviewing": "Đang xét duyệt",
+    "interview": "Mời phỏng vấn",
+    "accepted": "Trúng tuyển",
+    "rejected": "Không phù hợp",
+    "rejectedNote": "Lần này chưa phù hợp. Hãy thử tìm công việc khác nhé!"
+  },
+  "profile": {
+    "title": "Hồ sơ",
+    "completion": "Hoàn thành {percent}%",
+    "basic": "Thông tin cơ bản",
+    "residence": "Tư cách lưu trú",
+    "language": "Tiếng Nhật & kinh nghiệm",
+    "location": "Nơi ở",
+    "lastName": "Họ",
+    "firstName": "Tên",
+    "lastNameKana": "Họ (Katakana)",
+    "firstNameKana": "Tên (Katakana)",
+    "birthDate": "Ngày sinh",
+    "nationality": "Quốc tịch",
+    "phone": "Số điện thoại",
+    "phoneHint": "VD: 090-1234-5678",
+    "visa": "Loại visa",
+    "visaExpiry": "Hạn visa",
+    "japaneseLevel": "Trình độ tiếng Nhật",
+    "years": "Số năm kinh nghiệm",
+    "summary": "Kinh nghiệm & kỹ năng",
+    "summaryPlaceholder": "Hãy viết về công việc trước đây và những gì bạn làm được",
+    "currentPrefecture": "Tỉnh đang sống",
+    "select": "Vui lòng chọn",
+    "save": "Lưu",
+    "saving": "Đang lưu…",
+    "saved": "Đã lưu",
+    "resumes": "CV / Sơ yếu lý lịch",
+    "resumesHint": "PDF hoặc Word (.docx) · tối đa 5MB · tối đa 5 tệp",
+    "dropHere": "hoặc kéo thả tệp vào đây",
+    "chooseFile": "Chọn tệp",
+    "uploading": "Đang tải lên… {percent}%",
+    "uploaded": "Đã tải lên",
+    "default": "Chính",
+    "setDefault": "Đặt làm chính",
+    "view": "Tải xuống",
+    "delete": "Xóa",
+    "confirmDelete": "Xóa CV này?",
+    "noResumes": "Chưa có CV nào.",
+    "backToMypage": "Quay lại trang của tôi",
+    "desiredPrefectures": "Tỉnh muốn làm việc (chọn nhiều)",
+    "desiredHint": "{count, plural, =0 {Không chọn thì tìm trên toàn Nhật Bản.} other {Đã chọn #}}"
+  },
+  "apply": {
+    "cta": "Ứng tuyển nhanh",
+    "loginToApply": "Đăng nhập để ứng tuyển",
+    "title": "Ứng tuyển công việc này",
+    "chooseResume": "CV gửi kèm",
+    "noResume": "Ứng tuyển không kèm CV",
+    "uploadNew": "Tải CV mới lên",
+    "message": "Lời nhắn (không bắt buộc)",
+    "messagePlaceholder": "Giới thiệu bản thân, số ngày có thể làm…",
+    "submit": "Ứng tuyển",
+    "submitting": "Đang gửi…",
+    "close": "Đóng",
+    "applied": "Đã ứng tuyển (xem tại Trang của tôi)",
+    "success": "Đã gửi đơn ứng tuyển!",
+    "successText": "Bạn có thể theo dõi tình trạng tại Trang của tôi.",
+    "toMypage": "Xem Trang của tôi",
+    "toProfile": "Điền hồ sơ",
+    "staffNote": "Đăng nhập bằng tài khoản người tìm việc để ứng tuyển."
+  },
+  "admin": {
+    "nav": {
+      "dashboard": "Tổng quan",
+      "jobs": "Tin tuyển dụng",
+      "applications": "Ứng viên & CV",
+      "places": "Địa điểm",
+      "content": "Nội dung & dịch",
+      "users": "Người dùng & quyền",
+      "backToSite": "Xem trang web",
+      "logout": "Đăng xuất",
+      "news": "Thông báo",
+      "inquiries": "Liên hệ doanh nghiệp",
+      "analytics": "Thống kê"
+    },
+    "roles": {
+      "super_admin": "Quản trị cao nhất",
+      "recruiter_manager": "Quản lý tuyển dụng",
+      "recruiter": "Nhà tuyển dụng (tin của mình)",
+      "content_editor": "Biên tập nội dung",
+      "candidate": "Ứng viên"
+    },
+    "common": {
+      "forbidden": "Bạn không có quyền xem trang này.",
+      "total": "Tổng {total}",
+      "prev": "Trước",
+      "next": "Sau",
+      "pageOf": "{page} / {pages}",
+      "all": "Tất cả",
+      "noData": "Không có dữ liệu",
+      "save": "Lưu",
+      "saved": "Đã lưu",
+      "cancel": "Hủy",
+      "close": "Đóng",
+      "search": "Tìm kiếm",
+      "filter": "Lọc",
+      "confirmDelete": "Xóa mục này?",
+      "delete": "Xóa",
+      "selectHint": "Chọn một mục ở danh sách bên trái để xem chi tiết tại đây."
+    },
+    "jobStatus": {
+      "draft": "Nháp",
+      "pending": "Chờ duyệt",
+      "published": "Đã đăng",
+      "archived": "Ẩn"
+    },
+    "dashboard": {
+      "title": "Tổng quan",
+      "welcome": "Đang đăng nhập: {email}",
+      "pendingJobs": "Tin chờ duyệt",
+      "publishedJobs": "Tin đang đăng",
+      "draftJobs": "Bản nháp",
+      "newApplications": "Đơn mới chưa xử lý",
+      "applications7d": "Đơn trong 7 ngày",
+      "quickLinks": "Truy cập nhanh",
+      "newInquiries": "Liên hệ doanh nghiệp chưa xử lý"
+    },
+    "jobs": {
+      "title": "Tin tuyển dụng",
+      "new": "Tạo tin mới",
+      "keyword": "Tìm theo mã hoặc tiêu đề",
+      "filterStatus": "Trạng thái",
+      "filterPrefecture": "Tỉnh thành",
+      "from": "Ngày tạo từ",
+      "to": "Ngày tạo đến",
+      "code": "Mã tin",
+      "jobTitle": "Tiêu đề",
+      "status": "Trạng thái",
+      "prefecture": "Địa điểm",
+      "salary": "Lương",
+      "applications": "Ứng viên",
+      "created": "Ngày tạo",
+      "views": "Lượt xem"
+    },
+    "editor": {
+      "hourly": "Theo giờ",
+      "monthly": "Theo tháng",
+      "rejectPrompt": "Lý do trả lại (người tạo tin sẽ thấy)",
+      "submit": "Gửi duyệt",
+      "publish": "Duyệt & đăng",
+      "reject": "Trả lại",
+      "withdraw": "Rút yêu cầu duyệt",
+      "hide": "Ẩn tin",
+      "reopen": "Đăng lại",
+      "toDraft": "Về nháp",
+      "back": "Danh sách tin",
+      "titleNew": "Tin mới",
+      "reviewNote": "Lý do trả lại",
+      "sectionContent": "Nội dung tin",
+      "title": "Tiêu đề",
+      "description": "Mô tả công việc",
+      "sectionCompany": "Công ty tiếp nhận",
+      "endClientHint": "Chỉ nội bộ: không bao giờ hiển thị cho ứng viên",
+      "endClient": "Tên công ty thực tế",
+      "endClientAddress": "Địa chỉ công ty",
+      "internalNote": "Ghi chú nội bộ",
+      "displayName": "Tên hiển thị công khai",
+      "displayNameHint": "VD: \"Nhà sản xuất linh kiện ô tô lớn\". Để trống = hiển thị \"không công khai\".",
+      "displayLeak": "Tên hiển thị công khai đang chứa tên công ty thực tế.",
+      "sectionConditions": "Điều kiện",
+      "employmentType": "Hình thức",
+      "salaryType": "Kiểu lương",
+      "salaryMin": "Lương từ (yên)",
+      "salaryMax": "Lương đến (yên)",
+      "prefecture": "Tỉnh thành",
+      "level": "Trình độ tiếng Nhật",
+      "hoursPerWeek": "Giờ / tuần",
+      "expires": "Ngày hết hạn đăng",
+      "transport": "Hỗ trợ đi lại",
+      "visas": "Visa chấp nhận",
+      "features": "Điểm nổi bật",
+      "shift": "Giờ làm / ca",
+      "city": "Thành phố",
+      "station": "Ga gần nhất"
+    },
+    "apps": {
+      "title": "Ứng viên & CV",
+      "searchHint": "Tên, email hoặc mã tin",
+      "changeStatus": "Đổi trạng thái hồ sơ",
+      "recruiterNote": "Ghi chú nội bộ (ứng viên không thấy)",
+      "notify": "Gửi email thông báo cho ứng viên",
+      "profile": "Hồ sơ",
+      "nationality": "Quốc tịch",
+      "level": "Tiếng Nhật",
+      "visa": "Visa",
+      "phone": "Điện thoại",
+      "location": "Nơi ở",
+      "experience": "Số năm kinh nghiệm",
+      "coverMessage": "Lời nhắn",
+      "resume": "CV",
+      "download": "Tải xuống",
+      "noResume": "Ứng tuyển không kèm CV.",
+      "docxNote": "File Word: vui lòng tải xuống để xem.",
+      "emails": "Email đã gửi",
+      "previewError": "Không hiển thị được CV. Vui lòng tải xuống.",
+      "pdfPages": "Đang hiển thị {shown}/{total} trang",
+      "history": "Lịch sử trạng thái",
+      "deletedUser": "(không rõ)",
+      "resumeAccess": "Nhật ký xem CV",
+      "viewed": "xem trên màn hình",
+      "downloaded": "tải xuống",
+      "levelNone": "Không biết tiếng Nhật",
+      "years": "{n} năm",
+      "emailStatus": {
+        "queued": "Đang chờ gửi",
+        "sent": "Đã gửi",
+        "failed": "Gửi lỗi"
+      }
+    },
+    "places": {
+      "title": "Địa điểm",
+      "hint": "Bật/tắt khu vực trên bản đồ và tìm kiếm, đặt tên cho từng ngôn ngữ.",
+      "visible": "Hiển thị",
+      "hidden": "Ẩn",
+      "editNames": "Sửa tên"
+    },
+    "content": {
+      "title": "Nội dung & dịch",
+      "translations": "Chữ trên giao diện (bản dịch)",
+      "cms": "Thông báo & nội dung tĩnh",
+      "targetLocale": "Ngôn ngữ",
+      "namespace": "Màn hình",
+      "filterAll": "Tất cả",
+      "filterMissing": "Chỉ mục chưa dịch",
+      "filterOverridden": "Chỉ mục đã sửa",
+      "override": "Đã sửa",
+      "revert": "Khôi phục",
+      "placeholderError": "Giữ nguyên các biến {expected}.",
+      "syntaxError": "Sai định dạng (kiểm tra dấu { }).",
+      "cmsNew": "Tạo mới",
+      "cmsHint": "\"home.notice\" hiển thị ở ô thông báo trên trang chủ.",
+      "published": "Công khai",
+      "unpublished": "Không công khai",
+      "cmsKey": "Khóa",
+      "keyHint": "Chữ thường, số, . _ - (VD: home.notice)",
+      "cmsContent": "Nội dung"
+    },
+    "users": {
+      "title": "Người dùng & quyền",
+      "hint": "Thay đổi có hiệu lực ngay; người dùng phải đăng nhập lại.",
+      "role": "Quyền",
+      "email": "Email",
+      "name": "Họ tên",
+      "active": "Hoạt động",
+      "lastLogin": "Đăng nhập gần nhất",
+      "self": "bạn",
+      "roleChanged": "Đã cập nhật {email}"
+    },
+    "news": {
+      "title": "Quản lý thông báo",
+      "new": "Tạo mới",
+      "edit": "Sửa thông báo",
+      "preview": "Xem trước",
+      "view": "Xem trên trang",
+      "scheduled": "Hẹn giờ đăng",
+      "status": {
+        "draft": "Nháp",
+        "published": "Đã đăng",
+        "archived": "Lưu trữ"
+      },
+      "fieldTitle": "Tiêu đề",
+      "fieldSummary": "Tóm tắt",
+      "summaryHint": "Mô tả ngắn hiển thị ở danh sách.",
+      "fieldBody": "Nội dung",
+      "formatHint": "Dòng trống = đoạn mới. \"## \" tiêu đề, \"- \" gạch đầu dòng, **in đậm**, [chữ liên kết](/jobs).",
+      "fieldSlug": "URL (slug)",
+      "slugHint": "Chỉ chữ thường, số và dấu gạch ngang. VD: winter-jobs-2026",
+      "fieldStatus": "Trạng thái",
+      "fieldPublishedAt": "Thời gian đăng",
+      "publishedAtHint": "Để trống thì đăng ngay. Chọn thời gian trong tương lai thì bài tự đăng vào lúc đó.",
+      "searchPlaceholder": "Tìm theo tiêu đề hoặc slug"
+    },
+    "inquiries": {
+      "title": "Liên hệ từ doanh nghiệp",
+      "searchHint": "Công ty, người phụ trách, email",
+      "status": {
+        "new": "Chưa xử lý",
+        "contacted": "Đang xử lý",
+        "closed": "Hoàn tất"
+      },
+      "people": "{n} người",
+      "contact": "Người phụ trách",
+      "email": "Email",
+      "phone": "Điện thoại",
+      "prefecture": "Nơi làm việc",
+      "headcount": "Số người",
+      "language": "Ngôn ngữ",
+      "received": "Thời gian nhận",
+      "message": "Nội dung",
+      "statusLabel": "Tình trạng",
+      "note": "Ghi chú nội bộ",
+      "noteHint": "Không hiển thị cho khách hàng.",
+      "confirmDelete": "Xóa liên hệ này? Thông tin cá nhân cũng bị xóa và không khôi phục được.",
+      "kindLabel": "Loại",
+      "kind": {
+        "employer": "Doanh nghiệp",
+        "general": "Chung"
+      }
+    },
+    "analytics": {
+      "title": "Thống kê truy cập & ứng tuyển",
+      "range": "Khoảng thời gian",
+      "weeks": "{n} tuần",
+      "showTable": "Xem dạng bảng",
+      "showChart": "Xem biểu đồ",
+      "note": "Tuần bắt đầu từ thứ Hai (giờ Nhật). Lượt xem = số lần mở trang chi tiết job (cùng người xem lại trong 30 phút tính 1 lần). Lượt xem được đếm từ 13/11/2026, nên tỉ lệ ứng tuyển hiện \"–\" khi đơn ứng tuyển cũ chưa có lượt xem tương ứng.",
+      "views30": "Lượt xem (30 ngày)",
+      "apps30": "Đơn ứng tuyển (30 ngày)",
+      "conversion": "Tỉ lệ ứng tuyển (30 ngày)",
+      "liveJobs": "Job đang đăng",
+      "signups30": "Đăng ký mới (30 ngày)",
+      "weeklyTable": "Số liệu theo tuần",
+      "weekOf": "Tuần bắt đầu",
+      "applications": "Đơn ứng tuyển",
+      "views": "Lượt xem",
+      "signups": "Đăng ký mới",
+      "appsWeekly": "Đơn ứng tuyển theo tuần",
+      "viewsWeekly": "Lượt xem job theo tuần",
+      "signupsWeekly": "Ứng viên đăng ký mới theo tuần",
+      "byStatus": "Trạng thái đơn ứng tuyển",
+      "topJobs": "Job được xem nhiều nhất (30 ngày)",
+      "job": "Job",
+      "viewsTotal": "Tổng lượt xem",
+      "byPrefecture": "Đơn ứng tuyển theo tỉnh (90 ngày)",
+      "empty": "Chưa có dữ liệu.",
+      "error": "Không tải được dữ liệu thống kê."
+    }
+  },
+  "account": {
+    "title": "Cài đặt tài khoản",
+    "settingsCardTitle": "Cài đặt tài khoản",
+    "settingsCardText": "Email, mật khẩu, liên kết mạng xã hội, xóa tài khoản",
+    "forgotTitle": "Đặt lại mật khẩu",
+    "forgotLead": "Nhập địa chỉ email bạn đã đăng ký. Chúng tôi sẽ gửi liên kết đặt lại mật khẩu.",
+    "forgotSubmit": "Gửi email đặt lại",
+    "forgotSent": "Nếu email này đã được đăng ký, chúng tôi đã gửi liên kết đặt lại mật khẩu. Hãy kiểm tra hộp thư (hiệu lực 30 phút).",
+    "backToLogin": "Quay lại đăng nhập",
+    "resetTitle": "Đặt mật khẩu mới",
+    "resetLead": "Nhập mật khẩu mới của bạn.",
+    "newPassword": "Mật khẩu mới",
+    "confirmPassword": "Nhập lại mật khẩu mới",
+    "currentPassword": "Mật khẩu hiện tại",
+    "passwordMismatch": "Mật khẩu nhập lại không khớp.",
+    "resetSubmit": "Đổi mật khẩu",
+    "resetDone": "Đã đổi mật khẩu. Hãy đăng nhập bằng mật khẩu mới.",
+    "invalidLink": "Liên kết không hợp lệ hoặc đã hết hạn.",
+    "requestNewLink": "Gửi lại liên kết",
+    "verifyTitle": "Xác nhận email",
+    "verifying": "Đang xác nhận…",
+    "verifiedDone": "Đã xác nhận địa chỉ email.",
+    "emailChangedDone": "Đã đổi địa chỉ email thành {email}.",
+    "toMypage": "Đến Trang của tôi",
+    "bannerUnverified": "Email của bạn chưa được xác nhận. Hãy mở liên kết trong email chúng tôi đã gửi.",
+    "resend": "Gửi lại email",
+    "resent": "Đã gửi email xác nhận. Hãy kiểm tra hộp thư.",
+    "emailSection": "Địa chỉ email",
+    "currentEmail": "Hiện tại:",
+    "verified": "Đã xác nhận",
+    "unverified": "Chưa xác nhận",
+    "newEmail": "Email mới",
+    "changeEmailSubmit": "Gửi email xác nhận",
+    "changeEmailSent": "Đã gửi email xác nhận đến {email}. Mở liên kết trong email để hoàn tất.",
+    "passwordSection": "Đổi mật khẩu",
+    "setPasswordSection": "Tạo mật khẩu",
+    "setPasswordLead": "Bạn đang đăng nhập bằng Google hoặc Apple. Tạo mật khẩu để có thể đăng nhập bằng email.",
+    "changePasswordSubmit": "Lưu mật khẩu",
+    "passwordChanged": "Đã lưu mật khẩu. Các thiết bị khác đã bị đăng xuất.",
+    "linkedSection": "Liên kết tài khoản",
+    "linkedLead": "Liên kết Google hoặc Apple để đăng nhập chỉ với một chạm.",
+    "link": "Liên kết",
+    "unlink": "Hủy liên kết",
+    "linkedDone": "Đã liên kết tài khoản {provider}.",
+    "unlinkedDone": "Đã hủy liên kết tài khoản {provider}.",
+    "deleteSection": "Xóa tài khoản",
+    "deleteLead": "Hồ sơ, CV và lịch sử ứng tuyển sẽ bị xóa toàn bộ. Không thể hoàn tác.",
+    "deleteConfirmEmail": "Để xác nhận, hãy nhập địa chỉ email của bạn",
+    "deleteAgree": "Tôi đã hiểu, hãy xóa tài khoản",
+    "deleteSubmit": "Xóa tài khoản",
+    "deletedDone": "Đã xóa tài khoản. Cảm ơn bạn đã sử dụng Haken Work."
+  },
+  "newsPage": {
+    "title": "Thông báo",
+    "lead": "Tin mới nhất từ Haken Work.",
+    "empty": "Chưa có thông báo nào.",
+    "loadError": "Không tải được thông báo. Vui lòng thử lại sau.",
+    "backToList": "Về danh sách thông báo",
+    "notTranslated": "Thông báo này chưa được dịch sang ngôn ngữ của bạn.",
+    "pagination": "Phân trang",
+    "prev": "Trang trước",
+    "next": "Trang sau",
+    "seeAll": "Xem tất cả"
+  },
+  "employersPage": {
+    "metaTitle": "Dành cho doanh nghiệp | Tuyển nhân sự nước ngoài",
+    "eyebrow": "Hỗ trợ tuyển dụng người nước ngoài",
+    "heroTitle": "Thiếu nhân lực? Hãy tuyển nhân viên người nước ngoài cùng Haken Work.",
+    "heroLead": "Haken Work kết nối doanh nghiệp tại Nhật với người nước ngoài muốn làm việc ở Nhật, qua hình thức phái cử và giới thiệu việc làm. Chúng tôi lo từ khâu kiểm tra tư cách lưu trú đến hỗ trợ sau khi vào làm.",
+    "cta": "Tư vấn miễn phí",
+    "stats": {
+      "languages": {
+        "label": "Ngôn ngữ",
+        "value": "6"
+      },
+      "prefectures": {
+        "label": "Khu vực",
+        "value": "47 tỉnh thành"
+      },
+      "support": {
+        "label": "Phản hồi",
+        "value": "Trong 2 ngày làm việc"
+      }
+    },
+    "benefitsTitle": "Vì sao doanh nghiệp chọn chúng tôi",
+    "benefits": {
+      "speed": {
+        "title": "Giới thiệu nhanh",
+        "body": "Nhanh chóng giới thiệu ứng viên phù hợp yêu cầu, kể cả khi cần tăng người đột xuất."
+      },
+      "languages": {
+        "title": "Hỗ trợ bằng 6 ngôn ngữ",
+        "body": "Giải thích công việc cho nhân viên bằng tiếng Việt, Myanmar, Nepal, Bengal và tiếng Anh, giảm sai lệch kỳ vọng và nghỉ việc sớm."
+      },
+      "visa": {
+        "title": "Kiểm tra tư cách lưu trú trước",
+        "body": "Xác nhận người lao động được phép làm việc trước khi giới thiệu, giảm rủi ro lao động bất hợp pháp."
+      },
+      "support": {
+        "title": "Theo dõi sau khi vào làm",
+        "body": "Nhân viên của chúng tôi xử lý các vấn đề chấm công và đời sống, giảm gánh nặng cho người phụ trách tại nơi làm việc."
+      }
+    },
+    "industriesTitle": "Các ngành ứng viên thường làm",
+    "industries": {
+      "factory": "Sản xuất, nhà máy",
+      "logistics": "Kho bãi, logistics",
+      "food": "Chế biến thực phẩm",
+      "hotel": "Khách sạn, ryokan",
+      "cleaning": "Vệ sinh",
+      "construction": "Xây dựng",
+      "care": "Điều dưỡng",
+      "retail": "Bán lẻ, nhà hàng"
+    },
+    "flowTitle": "Quy trình",
+    "steps": {
+      "contact": {
+        "title": "Liên hệ",
+        "body": "Gửi tin nhắn cho chúng tôi bằng form bên dưới."
+      },
+      "hearing": {
+        "title": "Trao đổi",
+        "body": "Chúng tôi hỏi về công việc, số người, thời gian và điều kiện."
+      },
+      "contract": {
+        "title": "Ký hợp đồng",
+        "body": "Khi quý công ty đồng ý báo giá, hai bên ký hợp đồng."
+      },
+      "matching": {
+        "title": "Giới thiệu ứng viên",
+        "body": "Chọn ứng viên phù hợp, sắp xếp phỏng vấn và tham quan nơi làm việc."
+      },
+      "start": {
+        "title": "Bắt đầu làm việc",
+        "body": "Chúng tôi tiếp tục theo dõi sau khi nhân viên vào làm."
+      }
+    },
+    "faqTitle": "Câu hỏi thường gặp",
+    "faq": {
+      "cost": {
+        "q": "Chi phí là bao nhiêu?",
+        "a": "Tùy hình thức (phái cử hay giới thiệu), số người và điều kiện làm việc. Hãy liên hệ, chúng tôi sẽ gửi báo giá. Tư vấn miễn phí."
+      },
+      "visa": {
+        "q": "Ứng viên có tư cách lưu trú gì?",
+        "a": "Chúng tôi giới thiệu người được phép làm việc như vĩnh trú, định cư, vợ/chồng người Nhật, kỹ năng đặc định... Du học sinh chỉ làm trong phạm vi được cấp phép (thường tối đa 28 giờ/tuần)."
+      },
+      "japanese": {
+        "q": "Ứng viên nói tiếng Nhật tốt đến mức nào?",
+        "a": "Từ giao tiếp hằng ngày (khoảng N4) đến trình độ công việc (N2 trở lên). Hãy cho chúng tôi biết trình độ công việc cần."
+      },
+      "trouble": {
+        "q": "Nếu có vấn đề sau khi vào làm thì sao?",
+        "a": "Nhân viên của chúng tôi trao đổi với người lao động bằng tiếng mẹ đẻ và hỗ trợ giải quyết, nơi làm việc không phải tự xử lý một mình."
+      },
+      "area": {
+        "q": "Doanh nghiệp ở địa phương có dùng được không?",
+        "a": "Có, chúng tôi nhận yêu cầu ở cả 47 tỉnh thành. Việc có ký túc xá thường thu hút nhiều ứng viên."
+      }
+    },
+    "formTitle": "Form liên hệ",
+    "formLead": "Nhân viên phụ trách sẽ xem xét và phản hồi trong vòng 2 ngày làm việc.",
+    "form": {
+      "required": "Bắt buộc",
+      "optional": "Không bắt buộc",
+      "company": "Tên công ty",
+      "contact": "Người phụ trách",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "prefecture": "Nơi làm việc (tỉnh)",
+      "prefectureAny": "Chưa quyết định / nhiều nơi",
+      "headcount": "Số người cần tuyển",
+      "message": "Nội dung liên hệ",
+      "messageHint": "Mô tả công việc, thời gian, giờ làm... trong phạm vi bạn biết (tối đa 2.000 ký tự).",
+      "agree": "Tôi đồng ý để thông tin đã nhập được sử dụng theo <link>chính sách bảo mật</link>.",
+      "submit": "Gửi",
+      "doneTitle": "Đã nhận yêu cầu liên hệ",
+      "doneBody": "Chúng tôi đã gửi email xác nhận đến địa chỉ bạn nhập. Nhân viên phụ trách sẽ liên hệ trong vòng 2 ngày làm việc."
+    }
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "text": "Có thể URL bị sai hoặc trang đã bị xóa.",
+    "home": "Trang chủ",
+    "jobs": "Tìm việc"
+  },
+  "pages": {
+    "notTranslated": "Trang này chưa được dịch sang ngôn ngữ của bạn nên đang hiển thị tiếng Nhật.",
+    "preparing": "Trang này đang được chuẩn bị.",
+    "about": {
+      "title": "Giới thiệu công ty"
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật"
+    },
+    "terms": {
+      "title": "Điều khoản sử dụng"
+    }
+  },
+  "faqPage": {
+    "title": "Câu hỏi thường gặp",
+    "lead": "Tổng hợp các câu hỏi thường gặp về tìm việc và ứng tuyển.",
+    "groups": {
+      "start": "Người mới",
+      "apply": "Ứng tuyển",
+      "work": "Làm việc và tư cách lưu trú",
+      "account": "Tài khoản"
+    },
+    "items": {
+      "free": {
+        "q": "Đăng ký và ứng tuyển có mất phí không?",
+        "a": "Không. Đăng ký thành viên và ứng tuyển đều miễn phí."
+      },
+      "noJapanese": {
+        "q": "Không biết tiếng Nhật có ứng tuyển được không?",
+        "a": "Được. Có việc không yêu cầu tiếng Nhật. Dùng bộ lọc \"Trình độ tiếng Nhật\" để chỉ hiện việc phù hợp với bạn."
+      },
+      "abroad": {
+        "q": "Đang ở nước ngoài có ứng tuyển được không?",
+        "a": "Hiện tại dịch vụ dành cho người đang sống tại Nhật và có tư cách lưu trú được phép làm việc."
+      },
+      "how": {
+        "q": "Ứng tuyển như thế nào?",
+        "a": "Bấm \"Ứng tuyển\" ở trang việc làm, đăng nhập (hoặc đăng ký), điền hồ sơ rồi gửi."
+      },
+      "cv": {
+        "q": "Có cần CV không?",
+        "a": "Không có vẫn ứng tuyển được, nhưng có CV sẽ xét nhanh hơn. Tải lên tối đa 5 file PDF hoặc Word (mỗi file 5MB)."
+      },
+      "status": {
+        "q": "Xem kết quả ở đâu?",
+        "a": "Xem tình trạng ở Trang của tôi. Khi có thay đổi, chúng tôi cũng gửi email."
+      },
+      "cancel": {
+        "q": "Tôi muốn hủy đơn ứng tuyển.",
+        "a": "Vui lòng liên hệ qua form liên hệ."
+      },
+      "visa": {
+        "q": "Tư cách lưu trú nào được làm việc?",
+        "a": "Tư cách lưu trú quyết định công việc và số giờ bạn được làm. Xem trang \"Về visa\"."
+      },
+      "dormitory": {
+        "q": "Có việc có ký túc xá không?",
+        "a": "Có. Chọn \"Có ký túc xá\" ở mục Ưu tiên trong danh sách việc làm."
+      },
+      "pay": {
+        "q": "Khi nào và nhận lương thế nào?",
+        "a": "Tùy từng việc và hợp đồng. Hãy xác nhận khi phỏng vấn và ký hợp đồng."
+      },
+      "password": {
+        "q": "Tôi quên mật khẩu.",
+        "a": "Bấm \"Quên mật khẩu\" ở màn hình đăng nhập để nhận email đặt lại."
+      },
+      "delete": {
+        "q": "Tôi muốn xóa tài khoản.",
+        "a": "Vào Trang của tôi -> Cài đặt tài khoản -> Xóa tài khoản. Dữ liệu và CV sẽ bị xóa."
+      }
+    },
+    "more": "Không thấy câu hỏi của bạn?",
+    "contactLink": "Hãy gửi qua form liên hệ"
+  },
+  "visaPage": {
+    "title": "Về visa (tư cách lưu trú)",
+    "lead": "Bạn có được làm việc tại Nhật không, và được làm việc gì, phụ thuộc vào tư cách lưu trú. Hãy kiểm tra trước khi ứng tuyển.",
+    "groups": {
+      "free": {
+        "title": "Không giới hạn loại công việc",
+        "body": "Vĩnh trú, vợ/chồng người Nhật hoặc người vĩnh trú, định cư... được làm mọi loại việc, không giới hạn giờ, kể cả phái cử và làm thêm."
+      },
+      "limited": {
+        "title": "Chỉ được làm công việc được phép",
+        "body": "Kỹ năng đặc định, Kỹ sư/Chuyên gia nhân văn/Nghiệp vụ quốc tế, Thực tập kỹ năng... chỉ được làm trong lĩnh vực và nội dung được cấp phép. Khi đổi việc phải kiểm tra trước công việc mới có được phép không. Thực tập sinh về nguyên tắc không được làm ngoài nơi thực tập."
+      },
+      "permission": {
+        "title": "Được làm ít giờ nếu có giấy phép",
+        "body": "Du học và gia đình đoàn tụ, khi có \"giấy phép hoạt động ngoài tư cách\", thường được làm tối đa 28 giờ/tuần (du học sinh: tối đa 8 giờ/ngày trong kỳ nghỉ dài). Không được làm việc liên quan đến ngành giải trí người lớn."
+      }
+    },
+    "checkTitle": "Những điều cần kiểm tra",
+    "check": {
+      "card": "Xem mục \"hạn chế lao động\" ở mặt trước thẻ ngoại kiều và ô giấy phép ở mặt sau.",
+      "expiry": "Nộp đơn gia hạn trước khi hết thời hạn lưu trú (có thể nộp từ khoảng 3 tháng trước).",
+      "change": "Người có tư cách lao động phải báo với Cục Xuất nhập cảnh trong vòng 14 ngày khi đổi nơi làm việc."
+    },
+    "disclaimer": "Trang này chỉ là hướng dẫn chung. Với trường hợp của bạn, hãy hỏi Cục Quản lý Xuất nhập cảnh hoặc chuyên gia.",
+    "isaLink": "Trang web Cục Quản lý Xuất nhập cảnh"
+  },
+  "prefecturesPage": {
+    "title": "Tìm theo tỉnh",
+    "lead": "Chọn nơi bạn muốn làm việc. Con số là số việc đang tuyển."
+  },
+  "contactPage": {
+    "title": "Liên hệ",
+    "lead": "Gửi câu hỏi hoặc góp ý cho chúng tôi tại đây.",
+    "faqTitle": "Câu hỏi thường gặp",
+    "faqText": "Có thể bạn sẽ tìm thấy câu trả lời ở đây.",
+    "employersTitle": "Dành cho doanh nghiệp",
+    "employersText": "Yêu cầu tuyển dụng vui lòng dùng form dành cho doanh nghiệp.",
+    "formTitle": "Form liên hệ",
+    "formLead": "Chúng tôi sẽ phản hồi trong vòng 2 ngày làm việc.",
+    "form": {
+      "name": "Họ tên",
+      "email": "Email",
+      "message": "Nội dung",
+      "messageHint": "Tối đa 2.000 ký tự",
+      "agree": "Tôi đồng ý với <link>chính sách bảo mật</link>.",
+      "submit": "Gửi",
+      "doneTitle": "Đã nhận được liên hệ",
+      "doneBody": "Chúng tôi đã gửi email xác nhận và sẽ sớm liên hệ với bạn."
+    }
+  }
+}
