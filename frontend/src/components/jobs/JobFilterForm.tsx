@@ -1,6 +1,8 @@
 import { getTranslations } from 'next-intl/server';
-import { SlidersHorizontal } from 'lucide-react';
-import { EMPLOYMENT_TYPES, FEATURE_KEYS, HOURLY_STEPS, LEVELS, localize, type JobSearch, type VisaTypeInfo } from '@/lib/job';
+import NextLink from 'next/link';
+import { Loader2, SlidersHorizontal } from 'lucide-react';
+import FilterFormShell from './FilterFormShell';
+import { EMPLOYMENT_TYPES, FEATURE_KEYS, HOURLY_STEPS, LEVELS, jobSearchQuery, localize, type JobSearch, type VisaTypeInfo } from '@/lib/job';
 
 const select = 'min-h-[44px] w-full rounded-xl border border-slate-200 bg-white px-3 text-sm focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30';
 
@@ -24,7 +26,8 @@ export default async function JobFilterForm({ f, locale, visas }: { f: JobSearch
   const active = [f.level, f.visa, f.minHourly, f.employment, f.features?.length, f.sort === 'salary'].filter(Boolean).length;
 
   return (
-    <details className="group rounded-2xl border border-slate-200 bg-white shadow-sm" open={active > 0}>
+    // key: the fields are uncontrolled and navigation is client-side, so re-mount when the filters change (e.g. "reset")
+    <details key={JSON.stringify(jobSearchQuery({ ...f, page: 1 }))} className="group rounded-2xl border border-slate-200 bg-white shadow-sm" open={active > 0}>
       <summary className="flex min-h-[48px] cursor-pointer list-none items-center justify-between gap-2 px-4 font-bold text-navy">
         <span className="flex items-center gap-2">
           <SlidersHorizontal className="h-4 w-4 text-brand" aria-hidden />
@@ -33,7 +36,7 @@ export default async function JobFilterForm({ f, locale, visas }: { f: JobSearch
         </span>
         <span className="text-slate-400 transition group-open:rotate-45" aria-hidden>＋</span>
       </summary>
-      <form method="get" action={`/${locale}/jobs`} className="space-y-4 border-t border-slate-100 p-4">
+      <FilterFormShell action={`/${locale}/jobs`} className="space-y-4 border-t border-slate-100 p-4">
         {f.prefecture && <input type="hidden" name="prefecture" value={f.prefecture} />}
         {!f.prefecture && f.region && <input type="hidden" name="region" value={f.region} />}
         {f.q && <input type="hidden" name="q" value={f.q} />}
@@ -91,13 +94,14 @@ export default async function JobFilterForm({ f, locale, visas }: { f: JobSearch
             </select>
           </label>
           <div className="flex gap-2">
-            <a href={`/${locale}/jobs${keepLocation(f)}`} className="inline-flex min-h-[44px] items-center rounded-full px-4 text-sm text-navy underline">{t('reset')}</a>
-            <button type="submit" className="inline-flex min-h-[44px] items-center rounded-full bg-brand px-6 text-sm font-bold text-white hover:bg-brand-dark">
+            <NextLink href={`/${locale}/jobs${keepLocation(f)}`} scroll={false} className="inline-flex min-h-[44px] items-center rounded-full px-4 text-sm text-navy underline">{t('reset')}</NextLink>
+            <button type="submit" className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-brand px-6 text-sm font-bold text-white hover:bg-brand-dark group-data-[pending]/f:pointer-events-none group-data-[pending]/f:opacity-70">
+              <Loader2 className="hidden h-4 w-4 animate-spin group-data-[pending]/f:block" aria-hidden />
               {t('apply')}
             </button>
           </div>
         </div>
-      </form>
+      </FilterFormShell>
     </details>
   );
 }

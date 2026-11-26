@@ -180,11 +180,21 @@ E. Chức năng chưa làm
     ベトナム), "日本語なし" thay cho "不問", kinh nghiệm "3年"; danh sách job trên
     điện thoại: mã job nằm dưới tiêu đề; trang 分析: chữ trên biểu đồ đọc được
     trên điện thoại, bảng job xem nhiều không bị cắt cột.
+  - (2026-11-14) Khối tài khoản (email, vai trò, サイトを見る, ログアウト) chuyển từ
+    chân menu trái lên GÓC TRÊN BÊN PHẢI: bấm vào avatar để mở menu (Esc / bấm
+    ra ngoài để đóng). Thanh trên cố định khi cuộn. Điện thoại: avatar ở góc phải
+    thanh xanh.
+    Menu trái cũng đứng yên khi cuộn trang (nếu menu dài hơn màn hình thì tự cuộn riêng).
   - Lưu ý: trang admin bằng tiếng my/ne/bn phần lớn hiện tiếng Nhật (chưa dịch,
     vì admin là nhân viên công ty). Ô chọn ngày hiện theo ngôn ngữ trình duyệt.
   - Dữ liệu thử còn sót trong DB dev: job "E2Eテスト求人...", user
     cand-...@example.com, dbg-...@example.com, e2e-...@example.com -> có thể khóa
     (tắt 有効) ở /admin/users và ẩn job ở /admin/jobs.
+
+  - [ĐÃ SỬA 2026-11-14] /jobs: mỗi lần bấm tỉnh trên bản đồ lại hiện thêm 1 ô tìm
+    kiếm (ô tìm kiếm và bản đồ dùng trùng "key" React). Đã đặt key riêng.
+    Thêm biểu tượng tab trình duyệt (frontend/src/app/icon.svg, chữ H trắng nền đỏ)
+    - thay bằng logo thật khi có.
 
   - Ý TƯỞNG NÂNG CẤP TIẾP (chưa làm, chọn rồi báo AI):
       * Email thông báo job mới theo điều kiện đã lưu (job alert) - cần email
@@ -350,3 +360,24 @@ F. Môi trường chạy thử (local)
     (mã HK-2026-000001 ... HK-2026-000015).
     Tài khoản recruiter mẫu: seed-recruiter@example.com (không có mật
     khẩu, không đăng nhập được).
+
+SỔ TAY THUẬT NGỮ (26/11/2026)
+  - Đã làm trang giải thích dễ hiểu (cho người không phải HR): Haken 3 bên, 4 hình
+    thức làm việc, đọc lương 時給 + máy tính ước tính tháng, JLPT N5-N1, nhóm visa,
+    hành trình ứng viên (trạng thái đơn), duyệt tin (Nháp/Chờ duyệt/Đã đăng/Ẩn),
+    vai trò admin, liên hệ doanh nghiệp, trang Phân tích, từ điển ~40 từ tiếng Nhật.
+    Link (riêng tư): https://claude.ai/artifact/NoDmbLmfLjibkazGyCon9Z
+  - Lưu ý: nếu đổi trạng thái/vai trò/công thức ước tính lương trong code thì
+    cập nhật lại sổ tay này cho khớp.
+
+SỬA LỖI BỘ LỌC /jobs NHẢY LÊN ĐẦU TRANG (26/11/2026)
+  - Nguyên nhân: form lọc là GET thuần -> trình duyệt tải lại cả trang, cuộn về đầu.
+  - Sửa: components/jobs/FilterFormShell.tsx (client) chặn submit, dùng
+    router.push(..., { scroll: false }); nút "Xóa bộ lọc" dùng Link scroll={false}.
+    Khi đang tải, nút Tìm kiếm hiện vòng quay. Không có JavaScript thì form vẫn chạy
+    kiểu cũ. URL bỏ các tham số rỗng (level= ...).
+  - Lưu ý: thẻ <details> của bộ lọc có key = bộ lọc hiện tại để các ô chọn
+    (uncontrolled) được dựng lại khi bộ lọc đổi. Key đặt trên Server Component
+    (<JobFilterForm key=...>) KHÔNG có tác dụng - phải đặt trên phần tử HTML bên trong.
+  - Chưa làm: phân trang (trang 1/2/3) vẫn cuộn lên đầu trang; nếu muốn, cho cuộn
+    tới đầu danh sách kết quả.

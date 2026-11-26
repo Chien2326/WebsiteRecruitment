@@ -71,10 +71,11 @@ export default async function JobsPage({
   return (
     <div className="space-y-5">
       <h1 className="text-xl font-bold text-navy md:text-2xl">{t('title')}</h1>
-      <QuickSearch key={`${f.prefecture ?? ''}|${f.q ?? ''}`} counts={counts} defaultPrefecture={f.prefecture} defaultQ={f.q} places={places} />
-      {/* key: re-mount (and re-zoom) when the location filter changes via navigation */}
+      <QuickSearch key={`search:${f.prefecture ?? ''}|${f.q ?? ''}`} counts={counts} defaultPrefecture={f.prefecture} defaultQ={f.q} places={places} />
+      {/* key: re-mount (and re-zoom) when the location filter changes. The "search:" / "map:" prefixes keep the two
+          sibling keys different - identical keys made React keep the old search box, stacking a new one per click. */}
       <JapanMap
-        key={`${f.prefecture ?? ''}|${f.region ?? ''}`}
+        key={`map:${f.prefecture ?? ''}|${f.region ?? ''}`}
         counts={counts}
         mode="filter"
         selectedPrefectureId={f.prefecture}
@@ -100,7 +101,7 @@ export default async function JobsPage({
           </p>
         </div>
         {filtered && (
-          <Link href="/jobs" className="mt-1 inline-flex min-h-[44px] items-center text-sm text-navy underline">
+          <Link href="/jobs" scroll={false} className="mt-1 inline-flex min-h-[44px] items-center text-sm text-navy underline">
             {t('clearFilters')}
           </Link>
         )}

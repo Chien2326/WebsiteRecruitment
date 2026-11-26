@@ -337,7 +337,8 @@
       "logout": "Đăng xuất",
       "news": "Thông báo",
       "inquiries": "Liên hệ doanh nghiệp",
-      "analytics": "Thống kê"
+      "analytics": "Thống kê",
+      "account": "Menu tài khoản"
     },
     "roles": {
       "super_admin": "Quản trị cao nhất",

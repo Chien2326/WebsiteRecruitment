@@ -337,7 +337,8 @@
       "logout": "ログアウト",
       "news": "お知らせ",
       "inquiries": "企業お問い合わせ",
-      "analytics": "分析"
+      "analytics": "分析",
+      "account": "アカウントメニュー"
     },
     "roles": {
       "super_admin": "スーパー管理者",

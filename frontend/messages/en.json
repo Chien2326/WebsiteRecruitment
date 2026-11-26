@@ -337,7 +337,8 @@
       "logout": "Log out",
       "news": "News",
       "inquiries": "Employer inquiries",
-      "analytics": "Analytics"
+      "analytics": "Analytics",
+      "account": "Account menu"
     },
     "roles": {
       "super_admin": "Super admin",
